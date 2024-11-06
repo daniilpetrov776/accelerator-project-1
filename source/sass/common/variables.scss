@@ -8,6 +8,7 @@ $tablet-only: "(#{$tablet-min-width} <= width <= #{$tablet-max-width})";
 $desktop-only: "(width >= #{$desktop-min-width})";
 $not-mobile: "(width >= #{$tablet-min-width})";
 $not-desktop: "(width <= #{$desktop-min-width})";
+
 $smooth: cubic-bezier(0.4, 0, 0.4, 1);
 
 // colors
@@ -94,6 +95,38 @@ $mobile-h4: (
   font-size: 22px,
   line-height: 22px,
   font-weight: 700
+);
+
+$desktop-h5: (
+  font-size: 24px,
+  line-height: 24px,
+  font-weight: 400
+);
+$tablet-h5: (
+  font-size: 22px,
+  line-height: 22px,
+  font-weight: 400
+);
+$mobile-h5: (
+  font-size: 20px,
+  line-height: 20px,
+  font-weight: 400
+);
+
+$desktop-h6: (
+  font-size: 22px,
+  line-height: 22px,
+  font-weight: 400
+);
+$tablet-h6: (
+  font-size: 20px,
+  line-height: 20px,
+  font-weight: 400
+);
+$mobile-h6: (
+  font-size: 18px,
+  line-height: 20px,
+  font-weight: 400
 );
 
 // text

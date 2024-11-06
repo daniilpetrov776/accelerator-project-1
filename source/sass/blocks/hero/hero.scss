@@ -1,0 +1,28 @@
+.hero {
+  min-height: 412px;
+  color: $white-primary;
+  // background: linear-gradient(
+  // to right,
+  // #1C3477 20%,
+  // #1C3477 40%,
+  // #1A3578 60%,
+  // #73184B 80%,
+  // #B4022A 100%
+  // );
+  background: linear-gradient(to right,
+   #003D85 20%,
+   #73184B 80%,
+   #B80027 100%);
+}
+
+@media #{$not-mobile} {
+  .hero {
+    min-height: 574px;
+  }
+}
+
+@media #{$desktop-only} {
+  .hero {
+    min-height: 760px;
+  }
+}

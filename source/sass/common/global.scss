@@ -1,15 +1,10 @@
 body {
-  font-family: "Montserrat", "Arial", sans-serif;
-
-  // color: $base-black;
-  // font-weight: 400;
-  // line-height: 12px;
-  // font-size: 14px;
+  font-family: "Roboto-condensed", "Arial", sans-serif;
+  color: $secondary;
+  @include apply-styles($mobile-medium-text);
   min-height: 100%;
-  display: grid;
   margin: 0;
   padding: 0;
-  grid-template-rows: auto 1fr auto;
 }
 
 img {

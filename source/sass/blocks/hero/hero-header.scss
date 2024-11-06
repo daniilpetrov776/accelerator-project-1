@@ -1,0 +1,73 @@
+.hero-header {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  min-height: 54px;
+  justify-content: space-between;
+}
+
+.hero-header__phone {
+  color: $white-primary;
+  @include apply-styles($mobile-h4);
+  position: relative;
+  top: -2px;
+  transition: color $smooth 0.3s, text-decoration-thickness 0.3s,
+  text-underline-offset 0.3s;
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Толщина линии */
+    bottom: -2px; /* Позиция линии под текстом */
+    left: 0;
+    background-color: $primary; /* Цвет линии */
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: #1C337480;
+  }
+
+  &:focus-visible {
+    color: $secondary-button;
+  }
+
+  &:active {
+    color: $primary;
+  }
+
+  &:active::after {
+    width: 100%;
+    // color: $primary;
+    // text-decoration: underline;
+    // text-decoration-thickness: 2px; /* Толщина подчеркивания в активном состоянии */
+    // text-underline-offset: 6px;
+  }
+
+  &:disabled {
+    color: $white-secondary;
+  }
+}
+
+@media #{$not-mobile} {
+  .hero-header__phone {
+    @include apply-styles($tablet-h4)
+  }
+
+  .hero-header {
+    min-height: 84px;
+  }
+}
+
+@media #{$desktop-only} {
+  .hero-header__phone {
+    @include apply-styles($desktop-h4)
+  }
+
+  .hero-header {
+    min-height: 86px;
+  }
+}

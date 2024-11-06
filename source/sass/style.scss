@@ -1,6 +1,22 @@
 @import "vendor/normalize";
-@import "./common/global";
 @import "./common/variables";
+@import "./common/mixins";
+@import "./common/global";
 @import "./common/fonts";
 @import "./common/container";
-@import "./common/mixins";
+@import "./blocks/hero/hero";
+@import "./blocks/hero/promo";
+@import "./blocks/hero/hero-header";
+@import "./common/button";
+@import "./blocks/hero/promo-info";
+
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
+// @import "./blocks/hero/hero-header";
