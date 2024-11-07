@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  max-width: 1336px;
+  margin: 0 auto;
+
+  @media #{$mobile-only} {
+    width: 290px;
+  }
+
+  @media #{$tablet-only} {
+    width: 678px;
+  }
+
+  @media #{$desktop-only} {
+    width: 1130px;
+  }
+}

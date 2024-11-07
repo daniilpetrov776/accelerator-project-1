@@ -1,0 +1,59 @@
+.button {
+  @include apply-styles($mobile-button-medium);
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: solid 2px $primary;
+  min-height: 66px;
+  width: 100%;
+  padding: 20px 30px;
+  transition: color 0.3s $smooth, background 0.3s $smooth, border 0.3s $smooth;
+
+  &:hover {
+
+  }
+
+  &:focus-visible {
+
+  }
+
+  &:active {
+
+  }
+
+  &:active::after {
+
+  }
+
+  &:disabled {
+
+  }
+
+  &--button-secondary {
+    min-height: 60px;
+    border-color: $white-primary;
+    color: $white-primary;
+
+    &:hover {
+      background-color: $white-primary;
+      color: $secondary;
+    }
+
+    &:focus-visible {
+      background-color: #FFFFFFCC;
+      color: $secondary;
+      border-color: #000000;
+    }
+
+    &:active {
+      background-color: $white-primary;
+      color: $primary;
+    }
+
+    &:disabled {
+      opacity: 50%;
+    }
+  }
+}

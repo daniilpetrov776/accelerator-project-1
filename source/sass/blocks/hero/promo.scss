@@ -1,0 +1,34 @@
+.promo {
+  padding: 48px 0 32px;
+}
+
+.promo__picture-wrapper {
+  @media #{$mobile-only} {
+    display: none;
+  }
+}
+
+.promo__promo-picture {
+  display: block;
+}
+
+@media #{$not-mobile} {
+  .promo {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 30px;
+    padding: 0 0 32px 0;
+  }
+}
+
+@media #{$desktop-only} {
+  .promo {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 56px;
+    padding: 30px 72px 32px 0;
+  }
+}
