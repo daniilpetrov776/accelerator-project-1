@@ -1,0 +1,15 @@
+.sub-title {
+  @include apply-styles($mobile-h6)
+}
+
+@media #{$not-mobile} {
+  .sub-title {
+    @include apply-styles($tablet-h6);
+  }
+}
+
+@media #{$desktop-only} {
+  .sub-title {
+    @include apply-styles($desktop-h6);
+  }
+}

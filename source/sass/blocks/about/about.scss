@@ -1,0 +1,38 @@
+.about__about-wrapper {
+  padding: 0 0 40px;
+  position: relative;
+}
+
+.about__picture-wrapper {
+  margin: 0 0 36px;
+}
+
+@media #{$not-mobile} {
+  .about__about-wrapper {
+    padding: 0 0 120px;
+  }
+
+  .about__picture-wrapper {
+    margin: 0;
+    width: 678px;
+    height: 345px;
+  }
+}
+
+@media #{$desktop-only} {
+  .about__about-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 120px 0 240px;
+  }
+
+  .about__picture-wrapper {
+    margin: 0;
+    width: 660px;
+    height: 400px;
+  }
+
+}

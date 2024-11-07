@@ -1,0 +1,16 @@
+.section-title {
+  @include apply-styles($mobile-h3);
+  font-family: "Alumni-Sans", "Arial", sans-serif;
+}
+
+@media #{$not-mobile} {
+  .section-title {
+    @include apply-styles($tablet-h3);
+  }
+}
+
+@media #{$desktop-only} {
+  .section-title {
+    @include apply-styles($desktop-h3);
+  }
+}

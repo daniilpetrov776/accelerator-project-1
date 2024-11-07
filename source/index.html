@@ -50,27 +50,42 @@
       </div>
     </section>
     <section class="page__about about" data-test="about">
-      <div class="container">
+      <div class="container container--full-width about__about-wrapper">
         <div class="about__about-details about-details">
           <h2 class="about-details__title section-title">Тренажёрный зал</h2>
           <p class="about-details__sub-title sub-title">Просторный зал площадью 900 кв/м</p>
-          <p class="about-details__description">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+          <div class="about-details__text-content">
+            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+            <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+          </div>
         </div>
         <div class="about__picture-wrapper">
           <picture>
-            <img class="about__gym-picture" src="" alt="">
+            <source media="(min-width: 1366px)" srcset="./img/about/gym-desktop@1x.webp, ./img/about/gym-desktop@2x.webp 2x" type="image/webp" width="660" height="400">
+            <source media="(min-width: 1366px)" srcset="./img/about/gym-desktop@1x.jpg, ./img/about/gym-desktop@2x.jpg 2x" type="image/jpeg" width="660" height="400">
+            <source media="(min-width: 768px)" srcset="./img/about/gym-tablet@1x.webp, ./img/about/gym-tablet@2x.webp 2x" type="image/webp" width="678" height="345">
+            <source media="(min-width: 768px)" srcset="./img/about/gym-tablet@1x.jpg, ./img/about/gym-tablet@2x.jpg 2x" type="image/jpeg" width="678" height="345">
+            <source media="(min-width: 320px)" srcset="./img/about/gym-mobile@1x.webp, ./img/about/gym-mobile@2x.webp 2x" type="image/webp" width="320" height="280">
+            <img class="about__gym-picture" src="./img/about/gym-mobile@1x.jpg" srcset="./img/about/gym-mobile@2x.jpg 2x" width="320" height="280" alt="Современный фитнес зал.">
           </picture>
-          <div class="about__picture-mask"></div>
         </div>
         <div class="about__video video">
-          <div class="vide__preview-wrapper">
+          <div class="video__preview-wrapper">
             <picture>
-              <img class="vide__preview-picture" src="" alt="">
+              <source media="(min-width: 1366px)" srcset="./img/about/preview-desktop@1x.webp, ./img/about/preview-desktop@2x.webp 2x" type="image/webp" width="360" height="230">
+              <source media="(min-width: 1366px)" srcset="./img/about/preview-desktop@1x.jpg, ./img/about/preview-desktop@2x.jpg 2x" type="image/jpeg" width="360" height="230">
+              <source media="(min-width: 768px)" srcset="./img/about/preview-tablet@1x.webp, ./img/about/preview-tablet@2x.webp 2x" type="image/webp" width="270" height="170">
+              <source media="(min-width: 768px)" srcset="./img/about/preview-tablet@1x.jpg, ./img/about/preview-tablet@2x.jpg 2x" type="image/jpeg" width="270" height="170">
+              <source media="(min-width: 320px)" srcset="./img/about/preview-mobile@1x.webp, ./img/about/preview-mobile@2x.webp 2x" type="image/webp" width="320" height="170">
+              <img class="vide__preview-picture" src="./img/about/preview-mobile@1x.jpg" srcset="./img/about/preview-mobile@2x.jpg 2x" width="320" height="170" alt="Экскурсия по нашему фитнес залу.">
             </picture>
+            <div class="video__preview-mask"></div>
           </div>
-          <div class="video__play-button" >
-
-          </div>
+          <button class="video__play-button video__play-button--mobile" type="button">
+            <!-- <svg class="video__play-icon">
+              <use href="/__spritemap#sprite-play-mobile" width="12" height="12"></use>
+            </svg> -->
+          </button>
         </div>
       </div>
     </section>
