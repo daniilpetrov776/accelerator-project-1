@@ -4,6 +4,8 @@
   align-items: center;
   min-height: 54px;
   justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
 }
 
 .hero-header__phone {
@@ -15,6 +17,7 @@
   text-underline-offset 0.3s;
   text-decoration: none;
   position: relative;
+  max-width: 150px;
 
   &::after {
     content: '';
@@ -54,7 +57,8 @@
 
 @media #{$not-mobile} {
   .hero-header__phone {
-    @include apply-styles($tablet-h4)
+    @include apply-styles($tablet-h4);
+    max-width: 330px;
   }
 
   .hero-header {
@@ -64,7 +68,8 @@
 
 @media #{$desktop-only} {
   .hero-header__phone {
-    @include apply-styles($desktop-h4)
+    @include apply-styles($desktop-h4);
+    max-width: 360px;
   }
 
   .hero-header {

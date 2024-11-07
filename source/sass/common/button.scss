@@ -3,10 +3,12 @@
   display: flex;
   flex-flow: wrap;
   align-items: center;
+  text-align: center;
   justify-content: center;
   border: solid 2px $primary;
   min-height: 66px;
   width: 100%;
+  padding: 20px 30px;
   transition: color 0.3s $smooth, background 0.3s $smooth, border 0.3s $smooth;
 
   &:hover {
