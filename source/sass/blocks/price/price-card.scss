@@ -1,0 +1,17 @@
+.price-card__title {
+  @include apply-styles($mobile-h4);
+}
+
+.price-card__description {
+  @include apply-styles($mobile-medium-text);
+}
+
+.price-card__price-shadow {
+  @include apply-styles($mobile-numbers-xl);
+  color: #E8E8E8;
+}
+
+.price-card__price {
+  @include apply-styles($mobile-numbers-medium);
+  color: $secondary;
+}

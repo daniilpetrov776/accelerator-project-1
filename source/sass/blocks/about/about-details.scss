@@ -1,6 +1,7 @@
 .about-details__text-content p {
   @include apply-styles($mobile-medium-text);
   margin: 0 0 36px;
+  color: $primary;
 
   &:last-of-type {
     display: none;

@@ -77,7 +77,7 @@
               <source media="(min-width: 768px)" srcset="./img/about/preview-tablet@1x.webp, ./img/about/preview-tablet@2x.webp 2x" type="image/webp" width="270" height="170">
               <source media="(min-width: 768px)" srcset="./img/about/preview-tablet@1x.jpg, ./img/about/preview-tablet@2x.jpg 2x" type="image/jpeg" width="270" height="170">
               <source media="(min-width: 320px)" srcset="./img/about/preview-mobile@1x.webp, ./img/about/preview-mobile@2x.webp 2x" type="image/webp" width="320" height="170">
-              <img class="vide__preview-picture" src="./img/about/preview-mobile@1x.jpg" srcset="./img/about/preview-mobile@2x.jpg 2x" width="320" height="170" alt="Экскурсия по нашему фитнес залу.">
+              <img class="video__preview-picture" src="./img/about/preview-mobile@1x.jpg" srcset="./img/about/preview-mobile@2x.jpg 2x" width="320" height="170" alt="Экскурсия по нашему фитнес залу.">
             </picture>
             <div class="video__preview-mask"></div>
           </div>
@@ -88,7 +88,53 @@
         </div>
       </div>
     </section>
-    <div data-test="about">about</div>
+    <section class="page__price price" data-test="price">
+      <div class="container price__price-wrapper">
+        <div class="price__price-select price-select">
+          <h2 class="section-title price-select__title">Абонементы</h2>
+          <ul class="price-select__options-wrapper">
+            <li class="price-select__option">
+              <button class="price-select__option-button price-select__option-button--active" type="button">1 месяц</button>
+            </li>
+            <li class="price-select__option">
+              <button class="price-select__option-button" type="button">6 месяцев</button>
+            </li>
+            <li class="price-select__option">
+              <button class="price-select__option-button" type="button">12 месяцев</button>
+            </li>
+          </ul>
+        </div>
+        <ul class="price__price-cards price-cards">
+          <li class="price-cards__price-card price-card">
+            <h3 class="price-card__title">С тренером</h3>
+            <p class="price-card__description">12 занятий</p>
+            <div class="price-card__price-wrapper">
+              <span class="price-card__price-shadow">5000</span>
+              <span class="price-card__price">5000</span>
+            </div>
+            <button class="price-card__buy-button button button--button-primary" type="button">Купить абонемент</button>
+          </li>
+          <li class="price-cards__price-card price-card">
+            <h3 class="price-card__title">Дневной</h3>
+            <p class="price-card__description">с 8:00 до 17:00</p>
+            <div class="price-card__price-wrapper">
+              <span class="price-card__price-shadow">1700</span>
+              <span class="price-card__price">1700</span>
+            </div>
+            <button class="price-card__buy-button button button--button-primary" type="button">Купить абонемент</button>
+          </li>
+          <li class="price-cards__price-card price-card">
+            <h3 class="price-card__title">Полный день</h3>
+            <p class="price-card__description">с 8:00 до 22:00</p>
+            <div class="price-card__price-wrapper">
+              <span class="price-card__price-shadow">2700</span>
+              <span class="price-card__price">2700</span>
+            </div>
+            <button class="price-card__buy-button button button--button-primary" type="button">Купить абонемент</button>
+          </li>
+        </ul>
+      </div>
+    </section>
     <div data-test="price">price</div>
     <div data-test="games">games</div>
     <div data-test="juri">juri</div>

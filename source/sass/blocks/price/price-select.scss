@@ -1,0 +1,14 @@
+.price-select__options-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.price-select__option-button {
+  @include apply-styles($mobile-tabs-lined);
+  color: #10265480;
+
+  &--active {
+    color: $primary;
+  }
+}

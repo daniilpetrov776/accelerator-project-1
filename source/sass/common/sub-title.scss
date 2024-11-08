@@ -1,5 +1,6 @@
 .sub-title {
-  @include apply-styles($mobile-h6)
+  @include apply-styles($mobile-h6);
+  color: $primary
 }
 
 @media #{$not-mobile} {

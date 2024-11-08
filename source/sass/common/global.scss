@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto-condensed", "Arial", sans-serif;
-  color: $secondary;
+  color: $primary;
   @include apply-styles($mobile-medium-text);
   min-height: 100%;
   margin: 0;

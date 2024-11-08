@@ -31,6 +31,11 @@
 
   }
 
+  &--button-primary {
+    color: $primary;
+    background-color: $white-primary;
+  }
+
   &--button-secondary {
     min-height: 60px;
     border-color: $white-primary;
