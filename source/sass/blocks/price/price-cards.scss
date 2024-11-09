@@ -7,6 +7,8 @@
   gap: 35px;
 }
 
-.price-card__title {
-
+@media #{$desktop-only} {
+  .price-cards {
+    flex-flow: wrap row;
+  }
 }

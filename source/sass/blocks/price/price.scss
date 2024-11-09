@@ -7,9 +7,53 @@
 }
 
 @media #{$not-mobile} {
+  .price {
+    background-image: url("../../../img/price/plates-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    object-fit: contain;
+    background-size: 325px 388px;
+
+    @supports (background-image: url("../../../img/price/plates-tablet@1x.webp")) {
+      background-image: url("../../../img/price/plates-tablet@1x.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/price/plates-tablet@2x.png");
+
+      @supports (background-image: url("../../../img/price/plates-tablet@2x.webp")) {
+        background-image: url("../../../img/price/plates-tablet@2x.webp");
+      }
+    }
+  }
+
   .price__price-wrapper {
     display: flex;
     flex-flow: wrap column;
     align-items: center;
+    padding: 60px 0 60px;
+  }
+}
+
+@media #{$desktop-only} {
+  .price {
+    background-image: url("../../../img/price/plates-desktop@1x.png");
+    background-size: 303px 446px;
+
+    @supports (background-image: url("../../../img/price/plates-desktop@1x.webp")) {
+      background-image: url("../../../img/price/plates-desktop@1x.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/price/plates-desktop@2x.png");
+
+      @supports (background-image: url("../../../img/price/plates-desktop@2x.webp")) {
+        background-image: url("../../../img/price/plates-desktop@2x.webp");
+      }
+    }
+  }
+
+  .price__price-wrapper {
+    padding: 100px 0 100px;
   }
 }

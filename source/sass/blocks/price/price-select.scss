@@ -75,3 +75,23 @@
     margin: 0 0 45px;
   }
 }
+
+@media #{$desktop-only} {
+  .price-select {
+    width: 350px;
+  }
+
+  .price-select__title {
+    margin:  0 0 20px;
+    @include apply-styles($desktop-h3);
+  }
+
+  .price-select__option-button {
+    min-height: 30px;
+    @include apply-styles($desktop-tabs-lined);
+  }
+
+  .price-select__options-wrapper {
+    margin: 0 0 40px;
+  }
+}
