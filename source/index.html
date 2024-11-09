@@ -36,7 +36,7 @@
               Групповые занятия
               Кардио-зона</p>
             <p class="promo-info__promo-title">Фитнес центр</p>
-            <a class="button button--button-secondary promo-info__button" href="#">Купить абонемент</a>
+            <a class="button button--button-secondary promo-info__button" href="#prices">Купить абонемент</a>
           </div>
           <div class="promo__picture-wrapper">
             <picture>
@@ -88,19 +88,19 @@
         </div>
       </div>
     </section>
-    <section class="page__price price" data-test="price">
+    <section class="page__price price" data-test="price" id="prices">
       <div class="container price__price-wrapper">
         <div class="price__price-select price-select">
           <h2 class="section-title price-select__title">Абонементы</h2>
           <ul class="price-select__options-wrapper">
             <li class="price-select__option">
-              <button class="price-select__option-button price-select__option-button--active" type="button">1 месяц</button>
+              <button class="price-select__option-button price-select__option-button--active" type="button" data-months="1">1 месяц</button>
             </li>
             <li class="price-select__option">
-              <button class="price-select__option-button" type="button">6 месяцев</button>
+              <button class="price-select__option-button"  data-months="6" type="button">6 месяцев</button>
             </li>
             <li class="price-select__option">
-              <button class="price-select__option-button" type="button">12 месяцев</button>
+              <button class="price-select__option-button" type="button" data-months="12">12 месяцев</button>
             </li>
           </ul>
         </div>
@@ -110,8 +110,8 @@
               <h3 class="price-card__title">С тренером</h3>
               <p class="price-card__description">12 занятий</p>
               <div class="price-card__price-wrapper">
-                <span class="price-card__price-shadow" aria-hidden="true">5000</span>
-                <span class="price-card__price">5000</span>
+                <span class="price-card__price-shadow" aria-hidden="true" data-service="coach">5000</span>
+                <span class="price-card__price" data-service="coach">5000</span>
               </div>
               <a class="price-card__buy-button button button--button-primary" type="button" href="#">Купить абонемент</a>
             </div>
@@ -121,8 +121,8 @@
               <h3 class="price-card__title">Дневной</h3>
               <p class="price-card__description">с 8:00 до 17:00</p>
               <div class="price-card__price-wrapper">
-                <span class="price-card__price-shadow" aria-hidden="true">1700</span>
-                <span class="price-card__price">1700</span>
+                <span class="price-card__price-shadow" aria-hidden="true" data-service="day">1700</span>
+                <span class="price-card__price" data-service="day">1700</span>
               </div>
               <a class="price-card__buy-button button button--button-primary" type="button" href="#">Купить абонемент</a>
             </div>
@@ -132,8 +132,8 @@
               <h3 class="price-card__title">Полный день</h3>
               <p class="price-card__description">с 8:00 до 22:00</p>
               <div class="price-card__price-wrapper">
-                <span class="price-card__price-shadow" aria-hidden="true">2700</span>
-                <span class="price-card__price">2700</span>
+                <span class="price-card__price-shadow" aria-hidden="true" data-service="full-day">2700</span>
+                <span class="price-card__price" data-service="full-day">2700</span>
               </div>
               <a disabled class="price-card__buy-button button button--button-primary" type="button" href="#">Купить абонемент</a>
             </div>

@@ -1,6 +1,6 @@
 .price-card {
   background-color: $white-primary;
-  padding: 50px 42px;
+  padding: 43px 35px;
   display: flex;
   flex-flow: wrap column;
   align-items: center;
@@ -19,6 +19,10 @@
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s $smooth;
+  }
+
+  &--button-is-focused::before {
+    transform: scaleX(1);
   }
 
   &::after {
@@ -73,17 +77,20 @@
   background-color: $white-primary;
   width: 100%;
   height: 100%;
-  text-align: center
+  text-align: center;
+  display: flex;
+  flex-flow: wrap column;
+  gap: 18px
 }
 
 .price-card__title {
   @include apply-styles($mobile-h4);
-  margin: 0 0 18px;
+  margin: 0;
 }
 
 .price-card__description {
   @include apply-styles($mobile-medium-text);
-  margin: 0 0 18px;
+  margin: 0;
 }
 
 .price-card__price-wrapper {
@@ -95,7 +102,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   padding: 0 0 0 37px;
-  margin: 0 0 18px;
+  margin: 0;
 }
 
 .price-card__price-shadow {
@@ -103,6 +110,10 @@
   color: #E8E8E8;
   position: absolute;
   left: 22px;
+
+  &--bigger {
+    left: 0;
+  }
 }
 
 .price-card__price {
@@ -114,9 +125,9 @@
   &::after {
     position: absolute;
     top: 20px;
-    left: 72px;
+    right: -39px;
     content: "";
-    width: 100%;
+    width: 30px;
     height: 100%;
     background-image: url("../../__spritemap#sprite-rouble-mobile");
     background-position: center;
@@ -127,12 +138,16 @@
 
 @media #{$not-mobile} {
   .price-card {
-    padding: 65px;
+    padding: 58px;
     width: 380px;
   }
 
+  .price-card__price-card-content {
+    gap: 22px;
+  }
+
   .price-card__price-wrapper {
-    margin: 0 0 22px;
+    margin: 0;
     padding: 0 0 0 42px;
     min-height: 150px;
     width: 250px;
@@ -140,12 +155,12 @@
 
   .price-card__title {
     @include apply-styles($tablet-h4);
-    margin: 0 0 22px;
+    margin: 0;
   }
 
   .price-card__description {
     @include apply-styles($universal-medium-text);
-    margin: 0 0 22px;
+    margin: 0;
   }
 
   .price-card__price-shadow {
@@ -156,9 +171,11 @@
     @include apply-styles($universal-numbers-medium);
 
     &::after {
-      background-position: 63px -26px;
+      background-position: center -26px;
       background-size: 32px 69px;
       top: 23px;
+      right: -44px;
+      width: 30px;
     }
   }
 }
@@ -168,30 +185,38 @@
     width: 360px;
   }
 
+  .price-card__price-card-content {
+    gap: 17px;
+  }
+
   .price-card__price-wrapper {
-    margin: 0 0 17px;
+    margin: 0;
     padding: 0 0 0 32px;
     width: 230px;
   }
 
   .price-card__title {
     @include apply-styles($desktop-h4);
-    margin: 0 0 17px;
+    margin: 0;
   }
 
   .price-card__description {
-    margin: 0 0 17px;
+    margin: 0;
   }
 
   .price-card__price-shadow {
     left: 13px;
+    &--bigger {
+      left: -20px;
+    }
   }
 
   .price-card__price {
     &::after {
-      background-position: 63px -26px;
+      background-position: center -26px;
       background-size: 32px 69px;
       top: 23px;
+      width: 30px;
     }
   }
 }

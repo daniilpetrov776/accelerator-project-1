@@ -49,6 +49,7 @@
     &:focus-visible {
       color: $white-primary;
       border-color: transparent;
+      outline: none;
     }
 
     &:disabled {
@@ -72,6 +73,7 @@
       background-color: #FFFFFFCC;
       color: $secondary;
       border-color: #000000;
+      outline: none;
     }
 
     &:active {

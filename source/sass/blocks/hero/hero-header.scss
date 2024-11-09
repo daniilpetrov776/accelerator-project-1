@@ -36,6 +36,7 @@
 
   &:focus-visible {
     color: $secondary-button;
+    outline: none;
   }
 
   &:active {

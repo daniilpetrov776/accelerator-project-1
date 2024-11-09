@@ -21,6 +21,8 @@ const playButtonClickHandler = () => {
   playButton.classList.add('video__play-button--playing');
 };
 
-if (playButton) {
-  playButton.addEventListener('click', playButtonClickHandler);
-}
+export const LazyLoadVideo = () => {
+  if (playButton) {
+    playButton.addEventListener('click', playButtonClickHandler);
+  }
+};

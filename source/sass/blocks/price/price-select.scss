@@ -36,20 +36,53 @@
   align-items: flex-start;
   background-color: transparent;
   position: relative;
+  cursor: pointer;
 
   &::after {
     position: absolute;
     content: "";
-    width: 0;
+    width: 100%;
     height: 2px;
     left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
   }
 
+  &:hover:not(.price-select__option-button--active) {
+    color: #102654B2;
+    &::after {
+      background-color: #787878;
+      transform: scaleX(1);
+      bottom: 0;
+      transform-origin: left;
+    }
+  }
+
+  &:focus-visible {
+    color: $primary;
+    outline: none;
+    &::after {
+      transform: scaleX(1);
+      bottom: 0;
+      transform-origin: left;
+      background-color: $primary;
+    }
+  }
+
+  &:disabled {
+    color: $primary;
+    opacity: 30%;
+    &::after {
+      background-color: $primary;
+      transform: scaleX(1);
+      bottom: 0;
+    }
+  }
 
   &--active {
     color: $primary;
     &::after {
-      width: 100%;
+      transform: scaleX(1);
       background-color: #D10A42;
       bottom: 0;
     }
