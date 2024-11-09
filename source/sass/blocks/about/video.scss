@@ -84,7 +84,6 @@
   &:active::before {
     background: $white-primary;
     transform:  translate(-50%, -50%) scale(0.8056);
-    // transform: translate(-50%, -50%);
   }
 
   &:active .video__play-icon{

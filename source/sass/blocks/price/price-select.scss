@@ -1,14 +1,77 @@
 .price-select__options-wrapper {
-  margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: space-between;
+  min-height: 26px;
+  position: relative;
+  margin: 0 0 30px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #78787833;
+    bottom: 0;
+  }
+}
+
+.price-select__title {
+  margin: 0 0 30px;
+  text-align: center
 }
 
 .price-select__option-button {
   @include apply-styles($mobile-tabs-lined);
   color: #10265480;
+  border: none;
+  min-height: 26px;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  background-color: transparent;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    left: 0;
+  }
+
 
   &--active {
     color: $primary;
+    &::after {
+      width: 100%;
+      background-color: #D10A42;
+      bottom: 0;
+    }
+  }
+}
+
+@media #{$not-mobile} {
+  .price-select {
+    width: 310px;
+  }
+
+  .price-select__title {
+    margin:  0 0 35px;
+    @include apply-styles($tablet-h3);
+  }
+
+  .price-select__option-button {
+    min-height: 28px;
+    @include apply-styles($tablet-tabs-lined);
+  }
+
+  .price-select__options-wrapper {
+    margin: 0 0 45px;
   }
 }

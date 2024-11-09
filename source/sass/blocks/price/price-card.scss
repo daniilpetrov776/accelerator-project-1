@@ -1,17 +1,74 @@
+.price-card {
+  background-color: $white-primary;
+  padding: 50px 42px;
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center
+}
+
 .price-card__title {
   @include apply-styles($mobile-h4);
+  margin: 0 0 18px;
 }
 
 .price-card__description {
   @include apply-styles($mobile-medium-text);
+  margin: 0 0 18px;
+}
+
+.price-card__price-wrapper {
+  min-height: 120px;
+  width: 206px;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 0 0 37px;
+  margin: 0 0 18px;
 }
 
 .price-card__price-shadow {
   @include apply-styles($mobile-numbers-xl);
   color: #E8E8E8;
+  position: absolute;
+  left: 22px;
 }
 
 .price-card__price {
   @include apply-styles($mobile-numbers-medium);
   color: $secondary;
+  z-index: 1;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 20px;
+    left: 72px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("../../__spritemap#sprite-rouble-mobile");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 210px;
+  }
+}
+
+@media #{$not-mobile} {
+  .price-card__title {
+    @include apply-styles($tablet-h4);
+  }
+
+  .price-card__description {
+    @include apply-styles($universal-medium-text);
+  }
+
+  .price-card__price-shadow {
+    @include apply-styles($universal-numbers-xl);
+  }
+
+  .price-card__price {
+    @include apply-styles($universal-numbers-medium);
+  }
 }
