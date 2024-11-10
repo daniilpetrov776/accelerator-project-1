@@ -4,11 +4,16 @@
   padding: 40px;
   display: flex;
   flex-flow: wrap;
+  min-height: 320px;
   gap: 16px 37px;
 }
 
 .games-promo__date-wrapper {
   width: 56px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  gap: 5px;
 }
 
 .games-promo__title {
@@ -19,20 +24,150 @@
 
 .games-promo__date {
   @include apply-styles($mobile-large-text);
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $white-primary;
+    left: 0;
+    bottom: -3px;
+  }
+}
+
+.games-promo__details {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  gap: 5px;
 }
 
 .games-promo__date-details {
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
+  display: flex;
+  gap: 3px;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.games-promo__small {
+  width: 32px;
 }
 
 .games-promo__bold {
   @include apply-styles($mobile-numbers-regular);
+  max-width: 50%
 }
 
 .games-promo__text {
   @include apply-styles($mobile-large-text);
   width: 171px;
   margin: 0;
+}
+
+@media #{$not-mobile} {
+  .games-promo {
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+  }
+
+  .games-promo__content-wraper {
+    width: 300px;
+    min-height: 348px;
+    gap: 10px 20px;
+  }
+
+  .games-promo__date-wrapper {
+    width: 100px;
+    gap: 4px;
+  }
+
+  .games-promo__details {
+    gap: 10px;
+  }
+
+  .games-promo__title {
+    @include apply-styles($tablet-h2);
+    width: 100px;
+  }
+
+  .games-promo__text {
+    @include apply-styles($universal-large-text);
+    width: 100%;
+  }
+
+  .games-promo__date {
+    @include apply-styles($universal-large-text);
+
+    &::after {
+      bottom: -2px;
+    }
+  }
+
+  .games-promo__bold {
+    @include apply-styles($tablet-numbers-regular);
+  }
+
+  .games-promo__small {
+    @include apply-styles($universal-small-text);
+  }
+
+  .games-promo__button {
+    min-height: 66px;
+  }
+}
+
+@media #{$desktop-only} {
+  .games-promo__content-wraper {
+    width: 500px;
+    min-height: 500px;
+    gap: 30px 77px;
+    padding: 60px 80px 98px;
+  }
+
+  .games-promo__date-wrapper {
+    width: 95px;
+    gap: 12px;
+  }
+
+  .games-promo__details {
+    gap: 20px;
+  }
+
+  .games-promo__title {
+    @include apply-styles($desktop-h2);
+    width: 168px;
+  }
+
+  .games-promo__text {
+    @include apply-styles($universal-large-text);
+    width: 100%;
+  }
+
+  .games-promo__date {
+    @include apply-styles($universal-large-text);
+
+    &::after {
+      bottom: -6px;
+    }
+  }
+
+  .games-promo__bold {
+    @include apply-styles($desktop-numbers-regular);
+  }
+
+  .games-promo__small {
+    @include apply-styles($universal-small-text);
+  }
+
+  .games-promo__button {
+    min-height: 66px;
+    @include apply-styles($desktop-button-medium);
+  }
 }

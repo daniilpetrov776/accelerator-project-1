@@ -1,0 +1,15 @@
+.games__games-wrapper {
+  padding: 25px 0;
+}
+
+@media #{$not-mobile} {
+  .games__games-wrapper {
+    padding: 60px 0;
+  }
+}
+
+@media #{$desktop-only} {
+  .games__games-wrapper {
+    padding: 100px 0;
+  }
+}
