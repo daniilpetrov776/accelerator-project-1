@@ -1,0 +1,38 @@
+.games-promo__content-wraper {
+  background-color: $banner;
+  color: $white-primary;
+  padding: 40px;
+  display: flex;
+  flex-flow: wrap;
+  gap: 16px 37px;
+}
+
+.games-promo__date-wrapper {
+  width: 56px;
+}
+
+.games-promo__title {
+  font-family: "Alumni-Sans", "Arial", sans-serif;
+  @include apply-styles($mobile-h2);
+  width: 117px;
+}
+
+.games-promo__date {
+  @include apply-styles($mobile-large-text);
+}
+
+.games-promo__date-details {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+.games-promo__bold {
+  @include apply-styles($mobile-numbers-regular);
+}
+
+.games-promo__text {
+  @include apply-styles($mobile-large-text);
+  width: 171px;
+  margin: 0;
+}

@@ -5,6 +5,7 @@ const priceContainer = document.querySelector('.price-select__options-wrapper');
 const pricingTexts = document.querySelectorAll('.price-card__price');
 const pricingShadows = document.querySelectorAll('.price-card__price-shadow');
 const purchaseButtons = document.querySelectorAll('.price-card__buy-button');
+const priceCards = document.querySelectorAll('.price-card');
 const scrollTriggerButton = document.querySelector('.promo-info__button');
 
 const toggleCardFocus = (card, addFocus) => {
@@ -44,18 +45,18 @@ priceContainer.addEventListener('click', (evt) => {
   }
 });
 
-const animateCardFocus = () => {
-  purchaseButtons.forEach((button, index) => {
+const animateCardHighlight = () => {
+  priceCards.forEach((card, index) => {
     setTimeout(() => {
-      button.focus();
-      setTimeout(() => button.blur(), 500);
+      card.classList.add('price-card--button-is-focused');
+      setTimeout(() => card.classList.remove('price-card--button-is-focused'), 500);
     }, index * 600);
   });
 };
 
 const handleScrollButtonClick = () => {
   if (window.innerWidth >= DESKTOP_RESOLUTION) {
-    setTimeout(animateCardFocus, 800);
+    setTimeout(animateCardHighlight, 800);
   }
 };
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="page" lang="ru" data-validate="html">
-
   <head>
     <meta charset="UTF-8">
     <title>SUPERGYM</title>
     <meta name="description" content="Фитнес центр SUPERGYM.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./img/about/gym-mobile@2x.webp" media="(max-width: 767px)" as="image" fetchpriority="high" type="image/webp">
     <link rel="preload" href="./fonts/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font">
@@ -43,7 +43,7 @@
               <source media="(min-width: 1366px)" srcset="./img/hero-desktop@1x.webp, ./img/hero-desktop@2x.webp 2x" type="image/webp" width="500" height="524">
               <source media="(min-width: 1366px)" srcset="./img/hero-desktop@1x.jpg, ./img/hero-desktop@2x.jpg 2x" type="image/jpeg" width="500" height="524">
               <source media="(min-width: 768px)" srcset="./img/hero-tablet@1x.webp, ./img/hero-tablet@2x.webp 2x" type="image/webp" width="324" height="390">
-              <img class="promo__promo-picture" src="./img/hero-tablet@1x.jpg" srcset="./img/hero-tablet@2x.jpg 2x" width="324" height="390" alt="Наш славный тренер.">
+              <img class="promo__promo-picture" media="(min-width: 768px)" src="./img/hero-tablet@1x.jpg" srcset="./img/hero-tablet@2x.jpg 2x" width="324" height="390" alt="Наш славный тренер.">
             </picture>
           </div>
         </div>
@@ -81,7 +81,7 @@
             </picture>
             <div class="video__preview-mask"></div>
           </div>
-          <button class="video__play-button" type="button">
+          <button class="video__play-button" type="button" aria-label="Начать воспроизведение.">
             <div class="video__play-icon"></div>
           </button>
           <div class="video__video-iframe"></div>
@@ -141,7 +141,44 @@
         </ul>
       </div>
     </section>
-    <div data-test="price">price</div>
+    <section class="page__games games" data-test="games">
+      <h2 class="visually-hidden">Соревнования по CrossFit.</h2>
+      <div class="container games__games-wrapper">
+        <div class="games__games-promo games-promo">
+          <div class="games-promo__content-wraper">
+            <div class="games-promo__title">SUPER<br>GAMES</div>
+            <div class="games-promo__details">
+              <div class="games-promo__date-wrapper">
+                <div class="games-promo__date">
+                  Дата
+                </div>
+                <div class="games-promo__date-details">
+                  <span class="games-promo__bold">7</span>Марта 2019
+                </div>
+              </div>
+              <div class="games-promo__date-wrapper">
+                <div class="games-promo__date">
+                  Время
+                </div>
+                <div class="games-promo__bold">12:00</div>
+              </div>
+            </div>
+            <p class="games-promo__text">Ежегодные соревнования по CrossFit</p>
+            <a class="games-promo__button button button--button-secondary">Заполнить заявку</a>
+          </div>
+          <div class="games-promo__picture-wrapper">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="./img/game/games-desktop@1x.webp, ./img/game/games-desktop@2x.webp 2x" type="image/webp" width="660" height="500">
+              <source media="(min-width: 1366px)" srcset="./img/game/games-desktop@1x.jpg, ./img/game/games-desktop@2x.jpg 2x" type="image/jpeg" width="660" height="500">
+              <source media="(min-width: 768px)" srcset="./img/game/games-tablet@1x.webp, ./img/game/games-tablet@2x.webp 2x" type="image/webp" width="378" height="348">
+              <source media="(min-width: 768px)" srcset="./img/game/games-tablet@1x.jpg, ./img/game/games-tablet@2x.jpg 2x" type="image/jpeg" width="378" height="348">
+              <source media="(min-width: 320px)" srcset="./img/game/games-mobile@1x.webp, ./img/game/games-mobile@2x.webp 2x" type="image/webp" width="290" height="290">
+              <img class="" src="./img/game/games-mobile@1x.jpg" srcset="./img/game/games-mobile@2x.jpg 2x" width="290" height="290" alt="Современный фитнес зал.">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
     <div data-test="games">games</div>
     <div data-test="juri">juri</div>
     <div data-test="features">features</div>
