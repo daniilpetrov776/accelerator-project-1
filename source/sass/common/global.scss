@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -12,7 +14,6 @@ body {
 }
 
 img {
-  // max-width: auto;
   max-height: 100%;
   object-fit: cover;
   display: block;

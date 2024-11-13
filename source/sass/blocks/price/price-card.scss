@@ -124,15 +124,15 @@
 
   &::after {
     position: absolute;
+    width: 24px;
+    height: 33px;
     top: 20px;
     right: -39px;
     content: "";
-    width: 30px;
-    height: 33px;
-    background-image: url("../../__spritemap#sprite-rouble-mobile");
-    background-position: center;
+    background-image: url("../../__spritemap#sprite-rouble-mobile-view");
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: 24px 171px;
+    background-size: 24px 33px;
   }
 }
 
@@ -171,8 +171,11 @@
     @include apply-styles($universal-numbers-medium);
 
     &::after {
-      background-position: center -26px;
-      background-size: 32px 69px;
+      // background-position: center -26px;
+      background-image: url("../../__spritemap#sprite-rouble-desktop-view");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 30px 42px;
       top: 23px;
       right: -44px;
       width: 30px;
@@ -209,15 +212,6 @@
     left: 13px;
     &--bigger {
       left: -20px;
-    }
-  }
-
-  .price-card__price {
-    &::after {
-      background-position: center -26px;
-      background-size: 32px 69px;
-      top: 23px;
-      width: 30px;
     }
   }
 }

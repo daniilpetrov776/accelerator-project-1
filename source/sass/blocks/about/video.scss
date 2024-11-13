@@ -53,6 +53,19 @@
   #003EB7);
   }
 
+  &::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 12px;
+    transition: background 0.6s $smooth;
+    mask: url("/__spritemap#sprite-play-mobile-view") right center no-repeat;
+    mask-size: 9px 12px;
+    background: $white-primary;
+    position: relative;
+    right: -2px;
+  }
+
   &:hover {
     border-color: #10265499;
   }
@@ -61,7 +74,7 @@
     background: $white-primary;
   }
 
-  &:hover .video__play-icon{
+  &:hover::after{
     background: #10265499;
   }
 
@@ -74,7 +87,7 @@
     background: #C8C9CC;
   }
 
-  &:focus-visible .video__play-icon{
+  &:focus-visible::after{
     background: $primary;
   }
 
@@ -87,20 +100,9 @@
     transform:  translate(-50%, -50%) scale(0.8056);
   }
 
-  &:active .video__play-icon{
+  &:active::after{
     background: $primary;
   }
-}
-
-.video__play-icon {
-  width: 9px;
-  height: 12px;
-  transition: background 0.6s $smooth;
-  mask: url("/__spritemap#sprite-play-mobile") right center no-repeat;
-  mask-size: 13px 15px;
-  background: $white-primary;
-  position: relative;
-  right: -2px;
 }
 
 .video__video-iframe {
@@ -143,16 +145,14 @@
       height: 72px;
       transition:  transform 0.1s $smooth;
     }
-  }
 
-  .video__play-icon {
-    width: 17px;
-    height: 17px;
-    mask: url("/__spritemap#sprite-play-desktop");
-    mask-repeat: no-repeat;
-    mask-position: 3px 1px;
-    mask-size: cover;
-    mask-size: 15px 17px;
-    background: $white-primary;
+    &::after {
+      width: 17px;
+      height: 17px;
+      mask: url("/__spritemap#sprite-play-desktop-view") center center no-repeat;
+      mask-size: cover;
+      mask-size: 17px 17px;
+      background: $white-primary;
+    }
   }
 }
