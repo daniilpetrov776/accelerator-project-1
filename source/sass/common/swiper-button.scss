@@ -1,0 +1,18 @@
+.swiper-button {
+  width: 50px;
+  height: 50px;
+  // position: relative;
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   // top: 0;
+  //   // left: 0;
+  //   // right: 0;
+  //   // bottom: 0;
+  //   border: solid 1px $primary;
+  //   border-radius: 50%;
+  // }
+}
+
+// нужно лобавить обертку для кнопки. Спозиционировать её абсолютно. Затем уже можно писать стили для состояний самой кнопки, так как им сейчас не поставить position: relative

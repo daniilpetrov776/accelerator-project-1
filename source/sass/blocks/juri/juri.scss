@@ -31,6 +31,10 @@
   }
 }
 
+.juri__swiper-slide-overlay {
+  padding: 0 0 5px;
+}
+
 .juri__juri-wrapper {
     display: flex;
     flex-flow: wrap column;
@@ -44,10 +48,10 @@
 }
 
 .juri__swiper-button {
-  width: 16px;
-  height: 32px;
+  // width: 16px;
+  // height: 32px;
   top: 50%;
-  transform: translateY(50%);
+  // transform: translateY(50%);
   display: none;
 }
 
@@ -58,6 +62,7 @@
 }
 
 .juri__swiper-button--prev {
+  left: -2px;
   &::after {
     content: "";
     position: absolute;
@@ -71,6 +76,7 @@
 }
 
 .juri__swiper-button--next {
+  right: 2px;
   &::after {
     content: "";
     position: absolute;
@@ -204,13 +210,15 @@
 
   .juri__swiper-button--prev {
     &::after {
-      left: 6px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
   .juri__swiper-button--next {
     &::after {
-      right: 6px;
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 }

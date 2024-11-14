@@ -1,0 +1,199 @@
+.feature {
+
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  min-height: 150px;
+  padding: 0 45px;
+  text-align: center;
+  gap: 12px;
+
+  p strong {
+    @include apply-styles($mobile-numbers-large);
+    background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p:first-child {
+    @include apply-styles($mobile-small-text);
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    color: #2E35AC;
+  }
+
+  div {
+    display: flex;
+    flex-flow: wrap column;
+    gap: 12px;
+  }
+
+  div p {
+    @include apply-styles($mobile-medium-text);
+    margin: 0;
+  }
+
+  h3 {
+    @include apply-styles($mobile-h6);
+    margin: 0;
+  }
+}
+
+.feature--central {
+  background-color: $secondary-button;
+  min-height: 225px;
+  justify-content: center;
+  padding: 30px 75px 40px;
+  gap: 20px;
+
+  p strong {
+    background-clip: text;
+    background: $white-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 5px 0;
+  }
+
+  p {
+    color: $white-primary;
+  }
+
+  p:first-child {
+    @include apply-styles($mobile-h4);
+    color: $white-primary;
+  }
+}
+
+@media #{$not-mobile} {
+  .feature {
+    width: 324px;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    min-height: 92px;
+    padding: 0;
+    gap: 15px;
+
+    p strong {
+      @include apply-styles($universal-numbers-large);
+      background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    div {
+      text-align: left;
+      max-width: 240px;
+    }
+
+    p {
+      @include apply-styles($universal-medium-text);
+      margin: 0;
+    }
+
+    p:first-of-type {
+      @include apply-styles($universal-small-text);
+      display: flex;
+      flex-flow: wrap column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      color: #2E35AC;
+    }
+
+    h3 {
+      @include apply-styles($tablet-h6);
+      margin: 0;
+      max-width: 203px;
+    }
+  }
+
+  .feature--central {
+    background-color: $secondary-button;
+    min-height: 225px;
+    justify-content: center;
+    place-self: center;
+    padding: 35px;
+    gap: 20px;
+    width: 320px;
+    margin: 0 30px 0 0;
+    display: flex;
+
+    p strong {
+      background-clip: text;
+      background: $white-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 0 5px 0;
+    }
+
+    p span {
+      @include apply-styles($tablet-h4)
+    }
+
+    p {
+      color: $white-primary;
+    }
+
+    p:first-child {
+      @include apply-styles($universal-medium-text);
+      color: $white-primary;
+    }
+  }
+}
+
+@media #{$desktop-only} {
+  .feature {
+    width: 360px;
+    display: flex;
+    flex-flow: wrap row;
+    min-height: 110px;
+    justify-content: space-between;
+    position: relative;
+
+    &:not(:first-child)::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #D10A4233;
+      top: -40px;
+      left: 0;
+    }
+
+    div {
+      text-align: left;
+      width: 210px;
+    }
+
+    h3 {
+      @include apply-styles($desktop-h6);
+    }
+  }
+
+  .feature--central {
+    min-height: 300px;
+    justify-content: center;
+    place-self: start;
+    order: 0;
+    background-color: #1C3374;
+    padding: 58px 40px;
+    gap: 30px;
+    width: 360px;
+    margin: 0;
+    display: flex;
+
+    &:not(:first-child)::after {
+      // background-color: transparent;
+    }
+
+    p strong {
+      margin: 0 0 10px 0;
+    }
+
+    p span {
+      @include apply-styles($desktop-h4)
+    }
+  }
+}

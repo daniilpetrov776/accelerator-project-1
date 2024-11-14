@@ -33,6 +33,7 @@
   justify-content: center;
   background-color: transparent;
   transition: border 0.3s $smooth;
+  cursor: pointer;
 
   &--playing {
     display: none;
