@@ -4,6 +4,7 @@
   position: relative;
   border-radius: 50%;
   cursor: pointer;
+  transition: background 0.3s $smooth;
 
   &::before {
     position: absolute;
@@ -14,7 +15,7 @@
     height: 100%;
     border-radius: 50%;
     border: solid 1px $primary;
-    transition: clip-path 0.3s $smooth, transform 0.3s $smooth, opacity 0.3s $smooth;
+    transition: clip-path 0.3s $smooth, transform 0.3s $smooth, opacity 0.3s $smooth, background 0.3s $smooth;
     opacity: 0;
     transform: scale(1.1);
   }
@@ -25,9 +26,30 @@
     opacity: 1;
   }
 
-  &:not(:hover)::before {
-    border-color: transparent;
-    transform: scale(1.1);
-    opacity: 0;
+  &:focus-visible::before {
+    border-color: $primary;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    background-color: #E8E8E8;
+    outline: none;
+  }
+
+  &:active::after {
+    background: $white-primary;
+  }
+
+  &:active {
+    background-color: $primary;
+  }
+
+  &:disabled {
+    cursor: auto;
+  }
+
+  &:disabled::after {
+    background: #1026544D;
   }
 }
