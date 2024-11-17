@@ -1,5 +1,6 @@
 .button {
   @include apply-styles($mobile-button-medium);
+
   display: flex;
   flex-flow: wrap;
   align-items: center;
@@ -13,78 +14,152 @@
   cursor: pointer;
   text-decoration: none;
 
-  &--button-primary {
-    color: $primary;
-    background-color: $white-primary;
-    position: relative;
-    z-index: 1;
+  // &--button-primary {
+  //   color: $primary;
+  //   background-color: $white-primary;
+  //   position: relative;
+  //   z-index: 1;
 
-    &::after {
-      position: absolute;
-      content: "";
-      top: -2px;
-      left: -2px;
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      background: linear-gradient(to right, #ED0233, #003EB7);
-      z-index: -1;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s $smooth;
-    }
+  //   &::after {
+  //     position: absolute;
+  //     content: "";
+  //     top: -2px;
+  //     left: -2px;
+  //     width: calc(100% + 4px);
+  //     height: calc(100% + 4px);
+  //     background: linear-gradient(to right, #ed0233, #003eb7);
+  //     z-index: -1;
+  //     transform: scaleX(0);
+  //     transform-origin: left;
+  //     transition: transform 0.3s $smooth;
+  //   }
 
-    &:hover::after {
-      transform: scaleX(1);
-    }
+  //   &:hover::after {
+  //     transform: scaleX(1);
+  //   }
 
-    &:hover {
-      color: $white-primary;
-      border-color: transparent;
-    }
+  //   &:hover {
+  //     color: $white-primary;
+  //     border-color: transparent;
+  //   }
 
-    &:focus-visible::after {
-      transform: scaleX(1);
-      background: linear-gradient(to right, #ED0233CC, #003EB7CC);
-    }
+  //   &:focus-visible::after {
+  //     transform: scaleX(1);
+  //     background: linear-gradient(to right, rgba(237, 2, 51, 0.8), rgba(0, 62, 183, 0.8));
+  //   }
 
-    &:focus-visible {
-      color: $white-primary;
-      border-color: transparent;
-      outline: none;
-    }
+  //   &:focus-visible {
+  //     color: $white-primary;
+  //     border-color: transparent;
+  //     outline: none;
+  //   }
 
-    &:disabled {
-      background: $white-primary;
-      color: $primary;
-      opacity: 30%;
-    }
+  //   &:disabled {
+  //     background: $white-primary;
+  //     color: $primary;
+  //     opacity: 30%;
+  //   }
+  // }
+
+  // &--button-secondary {
+  //   min-height: 60px;
+  //   border-color: $white-primary;
+  //   color: $white-primary;
+
+  //   &:hover {
+  //     background-color: $white-primary;
+  //     color: $secondary;
+  //   }
+
+  //   &:focus-visible {
+  //     background-color: rgba(255, 255, 255, 0.8);
+  //     color: $secondary;
+  //     border-color: #000000;
+  //     outline: none;
+  //   }
+
+  //   &:active {
+  //     background-color: $white-primary;
+  //     color: $primary;
+  //   }
+
+  //   &:disabled {
+  //     opacity: 50%;
+  //   }
+  // }
+}
+
+.button--button-primary {
+  color: $primary;
+  background-color: $white-primary;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(to right, #ed0233, #003eb7);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s $smooth;
   }
 
-  &--button-secondary {
-    min-height: 60px;
-    border-color: $white-primary;
+  &:hover::after {
+    transform: scaleX(1);
+  }
+
+  &:hover {
     color: $white-primary;
+    border-color: transparent;
+  }
 
-    &:hover {
-      background-color: $white-primary;
-      color: $secondary;
-    }
+  &:focus-visible::after {
+    transform: scaleX(1);
+    background: linear-gradient(to right, rgba(237, 2, 51, 0.8), rgba(0, 62, 183, 0.8));
+  }
 
-    &:focus-visible {
-      background-color: #FFFFFFCC;
-      color: $secondary;
-      border-color: #000000;
-      outline: none;
-    }
+  &:focus-visible {
+    color: $white-primary;
+    border-color: transparent;
+    outline: none;
+  }
 
-    &:active {
-      background-color: $white-primary;
-      color: $primary;
-    }
+  &:disabled {
+    background: $white-primary;
+    color: $primary;
+    opacity: 30%;
+  }
+}
 
-    &:disabled {
-      opacity: 50%;
-    }
+.button--button-secondary {
+  min-height: 60px;
+  border-color: $white-primary;
+  color: $white-primary;
+
+  &:hover {
+    background-color: $white-primary;
+    color: $secondary;
+  }
+
+  &:focus-visible {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $secondary;
+    border-color: #000000;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $white-primary;
+    color: $primary;
+  }
+
+  &:disabled {
+    opacity: 50%;
   }
 }
 

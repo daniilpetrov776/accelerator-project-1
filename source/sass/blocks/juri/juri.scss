@@ -31,15 +31,11 @@
   }
 }
 
-.juri__swiper-slide-overlay {
-  padding: 0 0 5px;
-}
-
 .juri__juri-wrapper {
-    display: flex;
-    flex-flow: wrap column;
-    align-items: center;
-    padding: 40px 0;
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  padding: 40px 0;
 }
 
 .juri__swiper {
@@ -54,12 +50,14 @@
 
 .juri__title {
   @include apply-styles($mobile-h3);
+
   font-family: "Alumni-Sans", "Arial", sans-serif;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 
 .juri__swiper-button--prev {
   left: -2px;
+
   &::after {
     content: "";
     position: absolute;
@@ -74,6 +72,7 @@
 
 .juri__swiper-button--next {
   right: 2px;
+
   &::after {
     content: "";
     position: absolute;
@@ -107,7 +106,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #102654E3;
+    background-color: rgba(16, 38, 84, 0.89);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.55s $smooth;
@@ -120,12 +119,12 @@
 }
 
 .juri__swiper-slide-overlay::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #888888;
   border-radius: 10px;
 }
 
 .juri__swiper-slide-overlay::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: #555555;
 }
 
 
@@ -144,10 +143,12 @@
   transform-origin: bottom;
   transition: transform 0.55s $smooth;
   overflow: auto;
+  padding: 0 0 4px;
 }
 
 .juri__swiper-slide-header {
   @include apply-styles($desktop-h6);
+
   color: $white-primary;
   margin: 0;
   transform: translateY(207px);
@@ -169,24 +170,26 @@
 }
 
 .juri__swiper-slide-header::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #888888;
   border-radius: 10px;
 }
 
 .juri__swiper-slide-header::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .juri__swiper-slide-genre {
   @include apply-styles($universal-medium-text);
+
   width: 52px;
-  color: #B6BDCC;
+  color: #b6bdcc;
   margin: 8px 0 33px;
   z-index: 2;
 }
 
 .juri__swiper-slide-description {
   @include apply-styles($universal-small-text);
+
   color: $white-primary;
   display: flex;
   flex-flow: wrap column;
@@ -197,14 +200,14 @@
 }
 
 @media #{$not-mobile} {
-
   .juri__juri-wrapper {
-    padding: 30px 0 60px 0;
+    padding: 30px 0 60px;
   }
 
   .juri__title {
     @include apply-styles($tablet-h3);
-    margin: 0 0 46px 0;
+
+    margin: 0 0 46px;
   }
 
   .juri__button-wrapper {

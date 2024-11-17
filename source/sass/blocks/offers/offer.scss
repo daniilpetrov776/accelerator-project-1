@@ -1,0 +1,162 @@
+.offer {
+  color: $secondary-button;
+  display: flex;
+  padding: 7px;
+  flex-flow: wrap column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(136deg, #d10a42 0%, #00359f 100%);
+
+  &:not(.offer--main)div {
+    background-color: $white-primary;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: wrap column;
+    gap: 20px;
+  }
+
+  h3 {
+    @include apply-styles($mobile-h4);
+
+    margin: 0;
+  }
+
+  p {
+    @include apply-styles($mobile-medium-text);
+
+    margin: 0;
+  }
+}
+
+.offer--main {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+
+  .offer__content-wrapper {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background-color: #ed0233;
+    color: $white-primary;
+
+    .offer__picture-wrapper {
+      padding: 0;
+    }
+
+    div {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    h3 {
+      @include apply-styles($mobile-h4);
+
+      margin: 0 0 9px;
+    }
+
+    span {
+      @include apply-styles($mobile-numbers-large);
+    }
+
+    p {
+      @include apply-styles($mobile-large-text);
+
+      margin: 28px 0;
+    }
+  }
+}
+
+
+@media #{$not-mobile} {
+  .offer {
+    text-align: left;
+    width: 324px;
+    min-height: 188px;
+
+    div {
+      gap: 10px;
+    }
+
+    h3 {
+      @include apply-styles($desktop-h4);
+
+      margin: 0;
+    }
+
+    p {
+      @include apply-styles($universal-medium-text);
+
+      margin: 0;
+    }
+
+    .offer__offer-link {
+      margin: auto 0 0;
+    }
+  }
+
+  .offer--main {
+    display: flex;
+    flex-flow: wrap row;
+    width: 678px;
+    margin: 0;
+
+    .offer__content-wrapper {
+      align-items: flex-start;
+      text-align: left;
+      justify-content: space-between;
+      padding: 40px 25px;
+      width: 278px;
+      min-height: 462px;
+
+      h3 {
+        @include apply-styles($tablet-h4);
+
+        margin: 0 0 20px;
+      }
+
+      span {
+        @include apply-styles($universal-numbers-large);
+      }
+
+      p {
+        @include apply-styles($universal-large-text);
+
+        margin: 40px 0 0;
+      }
+    }
+  }
+}
+
+@media #{$desktop-only} {
+  .offer {
+    width: 560px;
+    min-height: 174px;
+
+    .offer__offer-link {
+      margin: auto 0 0;
+    }
+
+    &:not(.offer--main)div {
+      min-height: 160px;
+    }
+  }
+
+  .offer--main {
+    width: 560px;
+
+    .offer__content-wrapper {
+      padding: 40px 45px;
+      width: 280px;
+      min-height: 460px;
+
+      h3 {
+        @include apply-styles($desktop-h4);
+      }
+    }
+  }
+}

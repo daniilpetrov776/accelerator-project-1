@@ -1,0 +1,38 @@
+.offers-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: wrap column;
+  gap: 30px;
+}
+
+@media #{$not-mobile} {
+  .offers-list {
+    flex-flow: wrap row;
+    gap: 35px 30px;
+  }
+}
+
+@media #{$desktop-only} {
+  .offers-list {
+    display: grid;
+    align-items: end;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+  }
+
+  .offers-list__offer {
+    grid-row: span 1;
+  }
+
+  .offers-list__offer {
+    &--main {
+      grid-row: span 2;
+    }
+  }
+
+  .offers-list__offer--main + .offers-list__offer {
+    margin: 82px 0 0;
+  }
+}

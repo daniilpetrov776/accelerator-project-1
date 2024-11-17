@@ -1,7 +1,8 @@
 .section-title {
   @include apply-styles($mobile-h3);
+
   font-family: "Alumni-Sans", "Arial", sans-serif;
-  color: $primary
+  color: $primary;
 }
 
 @media #{$not-mobile} {

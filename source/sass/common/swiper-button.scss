@@ -33,7 +33,7 @@
   }
 
   &:focus-visible {
-    background-color: #E8E8E8;
+    background-color: #e8e8e8;
     outline: none;
   }
 
@@ -50,6 +50,6 @@
   }
 
   &:disabled::after {
-    background: #1026544D;
+    background: rgba(16, 38, 84, 0.3);
   }
 }

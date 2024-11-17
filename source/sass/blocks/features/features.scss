@@ -9,13 +9,14 @@
 .features__content-wrapper {
   display: flex;
   flex-flow: wrap column;
-  gap: 40px
+  gap: 40px;
 }
 
 .features__title {
   @include apply-styles($mobile-h3);
+
   text-align: center;
-  margin: 0 0 40px 0;
+  margin: 0 0 40px;
   font-family: "Alumni-Sans", "Arial", sans-serif;
 }
 
@@ -37,7 +38,8 @@
 
   .features__title {
     @include apply-styles($tablet-h3);
-    margin: 0 0 50px 0;
+
+    margin: 0 0 50px;
   }
 
   .features__list {

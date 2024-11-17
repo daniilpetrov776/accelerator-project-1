@@ -408,7 +408,47 @@
         </div>
       </div>
     </section>
-    <div data-test="features">features</div>
+    <section class="offers" data-test="offers">
+      <div class="container container--full-width offers__wrapper">
+        <h2 class="offers__title section-title">Акции</h2>
+        <ul class="offers__offers-list offers-list">
+          <li class="offers-list__offer offers-list__offer--main offer offer--main">
+            <div class="offer__content-wrapper">
+              <div>
+                <h3>Год</h3>
+                <span>4999</span>
+                <p>Безлимитный абонемент в тренажёрный зал</p>
+              </div>
+              <a class="offer__offer-link offer-link offer-link--main" href="#">подробнее</a>
+            </div>
+            <div class="offer__picture-wrapper">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="./img/offers/girl-desktop@1x.webp, ./img/offers/girl-desktop@1x.webp 2x" type="image/webp" width="280" height="460">
+                <source media="(min-width: 1366px)" srcset="./img/offers/girl-desktop@1x.jpg, ./img/offers/girl-desktop@1x.jpg 2x" type="image/jpeg" width="280" height="460">
+                <source media="(min-width: 768px)" srcset="./img/offers/girl-tablet@1x.webp, ./img/offers/girl-tablet@1x.webp 2x" type="image/webp" width="400" height="462">
+                <source media="(min-width: 768px)" srcset="./img/offers/girl-tablet@1x.jpg, ./img/offers/girl-tablet@1x.jpg 2x" type="image/jpeg" width="400" height="462">
+                <source media="(min-width: 320px)" srcset="./img/offers/girl-mobile@1x.webp, ./img/offers/girl-mobile@1x.webp 2x" type="image/webp" width="320" height="360">
+                <img class="offer__picture" src="./img/offers/girl-mobile@1x.jpg" srcset="./img/offers/girl-mobile@1x.jpg 2x" width="320" height="360" alt="Наша фитнес-модель.">
+              </picture>
+            </div>
+          </li>
+          <li class="offers-list__offer offers-list__offer--aside offer">
+            <div>
+                <h3>Месяц бесплатно</h3>
+                <p>Приведи друга, получи абонемент в подарок</p>
+                <a class="offer__offer-link offer-link" href="#">подробнее</a>
+            </div>
+          </li>
+          <li class="offers-list__offer offers-list__offer--aside offer">
+            <div>
+                <h3>Скидка 20%</h3>
+                <p>Корпоративный фитнес с командой</p>
+                <a class="offer__offer-link offer-link" href="#">подробнее</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     <div data-test="offers">offers</div>
     <div data-test="faq">faq</div>
     <div data-test="reviews">reviews</div>

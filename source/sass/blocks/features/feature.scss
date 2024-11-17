@@ -1,5 +1,4 @@
 .feature {
-
   display: flex;
   flex-flow: wrap column;
   align-items: center;
@@ -10,18 +9,19 @@
 
   p strong {
     @include apply-styles($mobile-numbers-large);
+
     background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   p:first-child {
     @include apply-styles($mobile-small-text);
+
     display: flex;
     flex-flow: wrap column;
     align-items: center;
-    color: #2E35AC;
+    color: #2e35ac;
   }
 
   div {
@@ -32,11 +32,13 @@
 
   div p {
     @include apply-styles($mobile-medium-text);
+
     margin: 0;
   }
 
   h3 {
     @include apply-styles($mobile-h6);
+
     margin: 0;
   }
 }
@@ -49,11 +51,10 @@
   gap: 20px;
 
   p strong {
-    background-clip: text;
     background: $white-primary;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
   }
 
   p {
@@ -62,6 +63,7 @@
 
   p:first-child {
     @include apply-styles($mobile-h4);
+
     color: $white-primary;
   }
 }
@@ -77,9 +79,9 @@
 
     p strong {
       @include apply-styles($universal-numbers-large);
+
       background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
       background-clip: text;
-      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -90,20 +92,23 @@
 
     p {
       @include apply-styles($universal-medium-text);
+
       margin: 0;
     }
 
     p:first-of-type {
       @include apply-styles($universal-small-text);
+
       display: flex;
       flex-flow: wrap column;
       align-items: flex-start;
       justify-content: flex-start;
-      color: #2E35AC;
+      color: #2e35ac;
     }
 
     h3 {
       @include apply-styles($tablet-h6);
+
       margin: 0;
       max-width: 203px;
     }
@@ -121,15 +126,14 @@
     display: flex;
 
     p strong {
-      background-clip: text;
       background: $white-primary;
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin: 0 0 5px 0;
+      margin: 0 0 5px;
     }
 
     p span {
-      @include apply-styles($tablet-h4)
+      @include apply-styles($tablet-h4);
     }
 
     p {
@@ -138,6 +142,7 @@
 
     p:first-child {
       @include apply-styles($universal-medium-text);
+
       color: $white-primary;
     }
   }
@@ -157,7 +162,7 @@
       content: "";
       width: 100%;
       height: 2px;
-      background-color: #D10A4233;
+      background-color: rgba(209, 10, 66, 0.2);
       top: -40px;
       left: 0;
     }
@@ -177,7 +182,7 @@
     justify-content: center;
     place-self: start;
     order: 0;
-    background-color: #1C3374;
+    background-color: #1c3374;
     padding: 58px 40px;
     gap: 30px;
     width: 360px;
@@ -189,11 +194,11 @@
     }
 
     p strong {
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
     }
 
     p span {
-      @include apply-styles($desktop-h4)
+      @include apply-styles($desktop-h4);
     }
   }
 }

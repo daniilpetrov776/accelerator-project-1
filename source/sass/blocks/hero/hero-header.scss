@@ -10,17 +10,20 @@
 
 .hero-header__phone {
   color: $white-primary;
+
   @include apply-styles($mobile-h4);
-  position: relative;
+
   top: -2px;
-  transition: color $smooth 0.3s, text-decoration-thickness 0.3s,
-  text-underline-offset 0.3s;
+  transition:
+    color $smooth 0.3s,
+    text-decoration-thickness 0.3s,
+    text-underline-offset 0.3s;
   text-decoration: none;
   position: relative;
   max-width: 150px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 0;
     height: 2px; /* Толщина линии */
@@ -31,7 +34,7 @@
   }
 
   &:hover {
-    color: #1C337480;
+    color: rgba(28, 51, 116, 0.5);
   }
 
   &:focus-visible {
@@ -45,6 +48,7 @@
 
   &:active::after {
     width: 100%;
+
     // color: $primary;
     // text-decoration: underline;
     // text-decoration-thickness: 2px; /* Толщина подчеркивания в активном состоянии */
@@ -59,6 +63,7 @@
 @media #{$not-mobile} {
   .hero-header__phone {
     @include apply-styles($tablet-h4);
+
     max-width: 330px;
   }
 
@@ -70,6 +75,7 @@
 @media #{$desktop-only} {
   .hero-header__phone {
     @include apply-styles($desktop-h4);
+
     max-width: 360px;
   }
 

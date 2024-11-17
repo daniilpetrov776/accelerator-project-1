@@ -1,5 +1,6 @@
 .about-details__text-content p {
   @include apply-styles($mobile-medium-text);
+
   margin: 0 0 36px;
   color: $primary;
 
@@ -28,7 +29,7 @@
     display: flex;
     flex-flow: wrap column;
     justify-content: center;
-    align-items: center
+    align-items: center;
   }
 
   .about-details__title {
@@ -37,6 +38,7 @@
 
   .about-details__text-content p {
     @include apply-styles($universal-medium-text);
+
     width: 502px;
   }
 }
@@ -59,13 +61,17 @@
 
   .about-details__text-content p {
     @include apply-styles($universal-medium-text);
+
     width: 100%;
+
     &:last-of-type {
       display: block;
     }
+
     &:not(:last-child) {
       margin: 0 0 8px;
     }
+
     &:last-child {
       margin: 0;
     }

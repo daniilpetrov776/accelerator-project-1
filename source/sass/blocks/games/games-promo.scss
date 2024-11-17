@@ -18,12 +18,15 @@
 
 .games-promo__title {
   font-family: "Alumni-Sans", "Arial", sans-serif;
+
   @include apply-styles($mobile-h2);
+
   width: 117px;
 }
 
 .games-promo__date {
   @include apply-styles($mobile-large-text);
+
   width: 100%;
   position: relative;
 
@@ -61,11 +64,13 @@
 
 .games-promo__bold {
   @include apply-styles($mobile-numbers-regular);
-  max-width: 50%
+
+  max-width: 50%;
 }
 
 .games-promo__text {
   @include apply-styles($mobile-large-text);
+
   width: 171px;
   margin: 0;
 }
@@ -94,11 +99,13 @@
 
   .games-promo__title {
     @include apply-styles($tablet-h2);
+
     width: 100px;
   }
 
   .games-promo__text {
     @include apply-styles($universal-large-text);
+
     width: 100%;
   }
 
@@ -142,11 +149,13 @@
 
   .games-promo__title {
     @include apply-styles($desktop-h2);
+
     width: 168px;
   }
 
   .games-promo__text {
     @include apply-styles($universal-large-text);
+
     width: 100%;
   }
 
@@ -168,6 +177,7 @@
 
   .games-promo__button {
     min-height: 66px;
+
     @include apply-styles($desktop-button-medium);
   }
 }

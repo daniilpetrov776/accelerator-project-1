@@ -7,13 +7,16 @@
 
 .promo-info__promo-city {
   font-family: "Alumni-Sans", "Arial", sans-serif;
+
   @include apply-styles($mobile-h3);
+
   margin: 0 0 14px;
   grid-column: 2 / span 1;
 }
 
 .promo-info__promo-services {
   @include apply-styles($mobile-small-text);
+
   margin: 0;
   grid-column: 1 / span 1;
   align-self: end;
@@ -21,7 +24,9 @@
 
 .promo-info__promo-title {
   font-family: "Alumni-Sans", "Arial", sans-serif;
+
   @include apply-styles($mobile-h1);
+
   margin: 0;
   grid-column: 2 / span 1;
 }
@@ -41,7 +46,8 @@
 
   .promo-info__promo-city {
     margin: 0 0 6px;
-    @include apply-styles($tablet-h3)
+
+    @include apply-styles($tablet-h3);
   }
 
   .promo-info__button {
@@ -51,6 +57,7 @@
 
   .promo-info__promo-services {
     @include apply-styles($universal-small-text);
+
     grid-row: 1 /4;
     display: flex;
     flex-flow: wrap;
@@ -73,7 +80,8 @@
 
   .promo-info__promo-city {
     margin: 0 0 40px;
-    @include apply-styles($desktop-h3)
+
+    @include apply-styles($desktop-h3);
   }
 
   .promo-info__button {

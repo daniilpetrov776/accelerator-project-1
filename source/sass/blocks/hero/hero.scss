@@ -1,6 +1,7 @@
 .hero {
   min-height: 412px;
   color: $white-primary;
+
   // background: linear-gradient(
   // to right,
   // #1C3477 20%,
@@ -9,10 +10,11 @@
   // #73184B 80%,
   // #B4022A 100%
   // );
-  background: linear-gradient(to right,
-   #003D85 20%,
-   #73184B 80%,
-   #B80027 100%);
+  background:
+    linear-gradient(to right,
+    #003d85 20%,
+    #73184b 80%,
+    #b80027 100%);
 }
 
 @media #{$not-mobile} {
