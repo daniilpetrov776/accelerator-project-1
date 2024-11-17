@@ -82,15 +82,15 @@
       bottom: 0;
     }
   }
+}
 
-  &--active {
-    color: $primary;
+.price-select__option-button--active {
+  color: $primary;
 
-    &::after {
-      transform: scaleX(1);
-      background-color: #d10a42;
-      bottom: 0;
-    }
+  &::after {
+    transform: scaleX(1);
+    background-color: #d10a42;
+    bottom: 0;
   }
 }
 

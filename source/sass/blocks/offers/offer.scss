@@ -6,8 +6,9 @@
   align-items: center;
   text-align: center;
   background: linear-gradient(136deg, #d10a42 0%, #00359f 100%);
+  min-height: 158px;
 
-  &:not(.offer--main)div {
+  .offer_content-wrapper {
     background-color: $white-primary;
     padding: 20px;
     width: 100%;
@@ -15,6 +16,7 @@
     display: flex;
     flex-flow: wrap column;
     gap: 20px;
+    min-height: 144px;
   }
 
   h3 {
@@ -43,6 +45,9 @@
     padding: 30px;
     background-color: #ed0233;
     color: $white-primary;
+    width: 320px;
+
+    // height: 271px;
 
     .offer__picture-wrapper {
       padding: 0;
@@ -51,6 +56,15 @@
     div {
       background-color: transparent;
       padding: 0;
+      display: flex;
+      flex-flow: nowrap column;
+
+      // height: calc(100% - 30px);
+    }
+
+    a {
+      align-self: center;
+      justify-self: flex-end;
     }
 
     h3 {
@@ -96,22 +110,38 @@
 
     .offer__offer-link {
       margin: auto 0 0;
+      align-self: flex-start;
     }
+  }
+
+  .offer-link--main {
+    display: block;
+    max-height: 70px;
+    overflow-y: auto;
   }
 
   .offer--main {
     display: flex;
     flex-flow: wrap row;
     width: 678px;
+    height: 462px;
     margin: 0;
 
     .offer__content-wrapper {
       align-items: flex-start;
       text-align: left;
+      flex-flow: wrap row;
       justify-content: space-between;
       padding: 40px 25px;
       width: 278px;
-      min-height: 462px;
+      height: 100%;
+
+      // overflow-y: auto;
+
+      div {
+        max-height: 302px;
+        overflow-y: auto;
+      }
 
       h3 {
         @include apply-styles($tablet-h4);
@@ -141,22 +171,26 @@
       margin: auto 0 0;
     }
 
-    &:not(.offer--main)div {
+    .offer_content-wrapper {
       min-height: 160px;
     }
   }
 
   .offer--main {
     width: 560px;
+  }
 
-    .offer__content-wrapper {
-      padding: 40px 45px;
-      width: 280px;
-      min-height: 460px;
+  .offer__content-wrapper--main {
+    padding: 40px 45px;
+    width: 280px;
+    height: 460px;
 
-      h3 {
-        @include apply-styles($desktop-h4);
-      }
+    div {
+
+    }
+
+    h3 {
+      @include apply-styles($desktop-h4);
     }
   }
 }

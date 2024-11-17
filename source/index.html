@@ -36,14 +36,16 @@
               Групповые занятия
               Кардио-зона</p>
             <p class="promo-info__promo-title">Фитнес центр</p>
-            <a class="button button--button-secondary promo-info__button" href="#prices">Купить абонемент</a>
+            <button class="button button--button-secondary promo-info__button" tabindex="-1">
+              <a class="button-link button-link--secondary promo-info__button-link" href="#prices">Купить абонемент</a>
+            </button>
           </div>
           <div class="promo__picture-wrapper">
             <picture>
               <source media="(min-width: 1366px)" srcset="./img/hero-desktop@1x.webp, ./img/hero-desktop@2x.webp 2x" type="image/webp" width="500" height="524">
               <source media="(min-width: 1366px)" srcset="./img/hero-desktop@1x.jpg, ./img/hero-desktop@2x.jpg 2x" type="image/jpeg" width="500" height="524">
               <source media="(min-width: 768px)" srcset="./img/hero-tablet@1x.webp, ./img/hero-tablet@2x.webp 2x" type="image/webp" width="324" height="390">
-              <img class="promo__promo-picture" media="(min-width: 768px)" src="./img/hero-tablet@1x.jpg" srcset="./img/hero-tablet@2x.jpg 2x" width="324" height="390" alt="Наш славный тренер.">
+              <img class="promo__promo-picture" src="./img/hero-tablet@1x.jpg" srcset="./img/hero-tablet@2x.jpg 2x" width="324" height="390" alt="Наш славный тренер.">
             </picture>
           </div>
         </div>
@@ -112,7 +114,9 @@
                 <span class="price-card__price-shadow" aria-hidden="true" data-service="coach">5000</span>
                 <span class="price-card__price" data-service="coach">5000</span>
               </div>
-              <a class="price-card__buy-button button button--button-primary" type="button" href="#">Купить абонемент</a>
+              <button class="price-card__buy-button button button--button-primary" tabindex="-1" disabled>
+                <a class="price-card__buy-link button-link button-link--primary" href="#">Купить абонемент</a>
+              </button>
             </div>
           </li>
           <li class="price-cards__price-card price-card">
@@ -123,7 +127,9 @@
                 <span class="price-card__price-shadow" aria-hidden="true" data-service="day">1700</span>
                 <span class="price-card__price" data-service="day">1700</span>
               </div>
-              <a class="price-card__buy-button button button--button-primary" type="button" href="#">Купить абонемент</a>
+              <button class="price-card__buy-button button button--button-primary" tabindex="-1">
+                <a class="price-card__buy-link button-link button-link--primary" href="#">Купить абонемент</a>
+              </button>
             </div>
           </li>
           <li class="price-cards__price-card price-card">
@@ -134,7 +140,9 @@
                 <span class="price-card__price-shadow" aria-hidden="true" data-service="full-day">2700</span>
                 <span class="price-card__price" data-service="full-day">2700</span>
               </div>
-              <a disabled class="price-card__buy-button button button--button-primary" type="button" href="#">Купить абонемент</a>
+              <button class="price-card__buy-button button button--button-primary" tabindex="-1">
+                <a class="price-card__buy-link button-link button-link--primary price-card__buy-link--is-focused" href="#">Купить абонемент</a>
+              </button>
             </div>
           </li>
         </ul>
@@ -187,7 +195,7 @@
             <button class="juri__swiper-button--prev juri__swiper-button swiper-button-prev swiper-button" tabindex="0"></button>
           </div>
           <div class="juri__button-wrapper juri__button-wrapper--next">
-            <button class="juri__swiper-button--next juri__swiper-button swiper-button-next swiper-button" tabindex="0" disabled></button>
+            <button class="juri__swiper-button--next juri__swiper-button swiper-button-next swiper-button" tabindex="0"></button>
           </div>
           <div class="juri__swiper swiper">
             <div class="juri__swiper-wrapper swiper-wrapper">
@@ -413,7 +421,7 @@
         <h2 class="offers__title section-title">Акции</h2>
         <ul class="offers__offers-list offers-list">
           <li class="offers-list__offer offers-list__offer--main offer offer--main">
-            <div class="offer__content-wrapper">
+            <div class="offer__content-wrapper offer__content-wrapper--main">
               <div>
                 <h3>Год</h3>
                 <span>4999</span>
@@ -433,17 +441,21 @@
             </div>
           </li>
           <li class="offers-list__offer offers-list__offer--aside offer">
-            <div>
+            <div class="offer_content-wrapper">
+              <div>
                 <h3>Месяц бесплатно</h3>
                 <p>Приведи друга, получи абонемент в подарок</p>
-                <a class="offer__offer-link offer-link" href="#">подробнее</a>
+              </div>
+              <a class="offer__offer-link offer-link" href="#">подробнее</a>
             </div>
           </li>
           <li class="offers-list__offer offers-list__offer--aside offer">
-            <div>
+            <div class="offer_content-wrapper">
+              <div>
                 <h3>Скидка 20%</h3>
                 <p>Корпоративный фитнес с командой</p>
-                <a class="offer__offer-link offer-link" href="#">подробнее</a>
+              </div>
+              <a class="offer__offer-link offer-link" href="#">подробнее</a>
             </div>
           </li>
         </ul>
