@@ -3,14 +3,28 @@
   margin: 0;
   list-style-type: none;
   display: flex;
+  align-items: center;
   flex-flow: wrap column;
   gap: 30px;
+}
+
+.offers-list__offer {
+  &--aside {
+    width: 290px;
+  }
 }
 
 @media #{$not-mobile} {
   .offers-list {
     flex-flow: wrap row;
     gap: 35px 30px;
+    align-items: flex-start;
+  }
+
+  .offers-list__offer {
+    &--aside {
+      width: 324px;
+    }
   }
 }
 
@@ -24,15 +38,19 @@
 
   .offers-list__offer {
     grid-row: span 1;
-  }
 
-  .offers-list__offer {
     &--main {
       grid-row: span 2;
     }
   }
 
-  .offers-list__offer--main + .offers-list__offer {
+  .offers-list__offer--main + .offers-list__offer--aside {
     margin: 82px 0 0;
+  }
+
+  .offers-list__offer {
+    &--aside {
+      width: 100%;
+    }
   }
 }

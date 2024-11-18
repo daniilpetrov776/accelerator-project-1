@@ -3,20 +3,20 @@
 
   color: $secondary-button;
 
-  // min-height: 20px;
   display: inline-block;
   position: relative;
   min-width: 73px;
   text-decoration: none;
-  padding: 0 0 6px;
+  padding: 10px;
+  transition: opacity 0.3s $smooth, outline 0.3s $smooth, background 0.3s $smooth;
 
   &::after {
     position: absolute;
     content: "";
     height: 1px;
-    width: 100%;
+    width: calc(100% - 20px);
     background-color: #74819c;
-    left: 0;
+    left: 10px;
     bottom: 0;
   }
 
@@ -27,4 +27,33 @@
   &--main::after {
     background-color: $white-primary;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: solid 1px $white-primary;
+  }
 }
+
+.offer-link:focus-visible::after {
+  background-color: transparent;
+}
+
+.offer-link--aside {
+  &:focus-visible {
+    outline: solid 1px #1C3374;
+  }
+}
+
+.offer-link--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+

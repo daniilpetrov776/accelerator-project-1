@@ -8,7 +8,7 @@
   background: linear-gradient(136deg, #d10a42 0%, #00359f 100%);
   min-height: 158px;
 
-  .offer_content-wrapper {
+  .offer__content-wrapper--aside {
     background-color: $white-primary;
     padding: 20px;
     width: 100%;
@@ -28,7 +28,7 @@
   p {
     @include apply-styles($mobile-medium-text);
 
-    margin: 0;
+    margin: 10px 0 30px;
   }
 }
 
@@ -36,52 +36,52 @@
   padding: 0;
   margin: 0;
   background: transparent;
+}
 
-  .offer__content-wrapper {
+.offer__offer-link {
+  align-self: center;
+}
+
+.offer--main .offer__content-wrapper {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background-color: #ed0233;
+  color: $white-primary;
+  width: 320px;
+
+  .offer__picture-wrapper {
+    padding: 0;
+  }
+
+  div {
+    background-color: transparent;
+    padding: 0;
     display: flex;
-    flex-flow: wrap column;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-    background-color: #ed0233;
-    color: $white-primary;
-    width: 320px;
+    flex-flow: nowrap column;
+  }
 
-    // height: 271px;
+  a {
+    align-self: center;
+    justify-self: flex-end;
+  }
 
-    .offer__picture-wrapper {
-      padding: 0;
-    }
+  h3 {
+    @include apply-styles($mobile-h4);
 
-    div {
-      background-color: transparent;
-      padding: 0;
-      display: flex;
-      flex-flow: nowrap column;
+    margin: 0 0 9px;
+  }
 
-      // height: calc(100% - 30px);
-    }
+  span {
+    @include apply-styles($mobile-numbers-large);
+  }
 
-    a {
-      align-self: center;
-      justify-self: flex-end;
-    }
+  p {
+    @include apply-styles($mobile-large-text);
 
-    h3 {
-      @include apply-styles($mobile-h4);
-
-      margin: 0 0 9px;
-    }
-
-    span {
-      @include apply-styles($mobile-numbers-large);
-    }
-
-    p {
-      @include apply-styles($mobile-large-text);
-
-      margin: 28px 0;
-    }
+    margin: 28px 0;
   }
 }
 
@@ -112,7 +112,13 @@
       margin: auto 0 0;
       align-self: flex-start;
     }
+
+    .offer__content-wrapper--aside {
+      min-height: 174px
+    }
   }
+
+
 
   .offer-link--main {
     display: block;
@@ -126,38 +132,36 @@
     width: 678px;
     height: 462px;
     margin: 0;
+  }
 
-    .offer__content-wrapper {
-      align-items: flex-start;
-      text-align: left;
-      flex-flow: wrap row;
-      justify-content: space-between;
-      padding: 40px 25px;
-      width: 278px;
-      height: 100%;
+  .offer--main .offer__content-wrapper {
+    align-items: flex-start;
+    text-align: left;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    padding: 40px 25px;
+    width: 278px;
+    height: 100%;
 
-      // overflow-y: auto;
+    div {
+      max-height: 302px;
+      overflow-y: auto;
+    }
 
-      div {
-        max-height: 302px;
-        overflow-y: auto;
-      }
+    h3 {
+      @include apply-styles($tablet-h4);
 
-      h3 {
-        @include apply-styles($tablet-h4);
+      margin: 0 0 20px;
+    }
 
-        margin: 0 0 20px;
-      }
+    span {
+      @include apply-styles($universal-numbers-large);
+    }
 
-      span {
-        @include apply-styles($universal-numbers-large);
-      }
+    p {
+      @include apply-styles($universal-large-text);
 
-      p {
-        @include apply-styles($universal-large-text);
-
-        margin: 40px 0 0;
-      }
+      margin: 40px 0 0;
     }
   }
 }
@@ -171,7 +175,7 @@
       margin: auto 0 0;
     }
 
-    .offer_content-wrapper {
+    .offer__content-wrapper--aside {
       min-height: 160px;
     }
   }
@@ -184,10 +188,6 @@
     padding: 40px 45px;
     width: 280px;
     height: 460px;
-
-    div {
-
-    }
 
     h3 {
       @include apply-styles($desktop-h4);
