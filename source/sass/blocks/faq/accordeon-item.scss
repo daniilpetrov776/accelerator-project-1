@@ -1,0 +1,122 @@
+// .accordeon-item {
+//   display: flex;
+//   flex-flow: column wrap;
+//   gap: 20px;
+//   position: relative;
+// }
+
+// .accordeon-item__open-button {
+//   position: absolute;
+//   content: "";
+//   width: 30px;
+//   height: 30px;
+//   border: solid 1px #1C3374;
+//   top: 21px;
+//   right: -52px;
+//   background: transparent;
+//   border-radius: 50%;
+
+//   &--active {
+//     background: #1C3374;
+//   }
+// }
+
+
+
+// .accordeon-item__content {
+//   display: none;
+//   padding: 20px 0;
+
+//   &--is-visible {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+
+//   }
+
+//   h3 {
+//     margin: 0;
+//     padding: 0 60px 0 0;
+//   }
+
+//   p {
+//     max-height: 0;
+//     overflow: hidden;
+//     margin: 0;
+//     transition: max-height 0.3 $smooth;
+//   }
+// }
+
+// .accordeon-item:last-child .accordeon-item__content {
+//   h3 {
+//     padding: 0;
+//   }
+// }
+
+// .accordeon-item__content--active {
+//   p {
+//     max-height: 100%;
+//     transition: max-height 0.3 $smooth;
+//   }
+// }
+
+.accordeon-item {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  position: relative;
+  transition: all 0.3s $smooth;
+}
+
+.accordeon-item__open-button {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: solid 1px #1C3374;
+  top: 21px;
+  right: -52px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.accordeon-item__open-button--active {
+  background: #1C3374;
+}
+
+.accordeon-item__content {
+  display: none;
+  padding: 20px 0;
+  transition: all 0.3s $smooth;
+}
+
+.accordeon-item__content--is-visible {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.accordeon-item__content h3 {
+  margin: 0;
+  padding: 0 60px 0 0;
+}
+
+.accordeon-item__content p {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  transform: scaleY(0);
+  transition: all 0.3s $smooth;
+  transform-origin: top;
+}
+
+.accordeon-item__content--active p {
+  transform: scaleY(1);
+  transition: all 0.3s $smooth;
+  max-height: 500px;
+}
+
+.accordeon-item:last-child .accordeon-item__content h3 {
+  padding: 0;
+}
