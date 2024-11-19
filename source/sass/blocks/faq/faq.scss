@@ -1,0 +1,36 @@
+.faq {
+  background-color: $white-secondary;
+}
+
+.faq__title {
+  text-align: center;
+  margin: 0;
+}
+
+.faq__faq-wrapper {
+  display: flex;
+  flex-flow: wrap column;
+  gap: 35px;
+  justify-content: flex-start;
+  padding: 70px 0;
+}
+
+@media #{$not-mobile} {
+  .faq__faq-wrapper {
+    padding: 60px 0;
+    gap: 45px;
+  }
+}
+
+@media #{$desktop-only} {
+  .faq__faq-wrapper {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 260px 1fr;
+    gap: 50px 40px;
+  }
+  .faq__title {
+    grid-column: 1/-1;
+    text-align: left;
+  }
+}

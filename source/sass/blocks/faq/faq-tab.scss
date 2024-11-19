@@ -3,6 +3,59 @@
 }
 
 .faq-tab__button {
+  @include apply-styles($mobile-tabs-button);
   width: 100%;
   height: 100%;
+  background-color: transparent;
+  border: solid 1px rgba(16, 38, 84, 0.2);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s $smooth, border 0.3s $smooth;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:  linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    z-index: -1;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
+  }
+
+  &--active {
+    border: transparent;
+    color: $white-primary;
+  }
+
+  &--active::after {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  &:focus-visible {
+    border-color: $primary;
+  }
+}
+
+@media #{$not-mobile} {
+  .faq-tab {
+    min-height: 54px;
+  }
+
+  .faq-tab__button {
+    @include apply-styles($tablet-tabs-button);
+  }
+}
+
+@media #{$desktop-only} {
+  .faq-tab__button {
+    @include apply-styles($desktop-tabs-button);
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru" data-validate="html">
+<html class="page" lang="ru" data-valdata-idate="html">
   <head>
     <meta charset="UTF-8">
     <title>SUPERGYM</title>
@@ -114,7 +114,7 @@
                 <span class="price-card__price-shadow" aria-hidden="true" data-service="coach">5000</span>
                 <span class="price-card__price" data-service="coach">5000</span>
               </div>
-              <a class="price-card__buy-button button button--button-primary button--button-primary-disabled" href="#" disabled>
+              <a class="price-card__buy-button button button--button-primary" href="#">
                 Купить абонемент
               </a>
             </div>
@@ -228,7 +228,7 @@
                 <div class="juri__swiper-slide-content-wrapper">
                   <h3 class="juri__swiper-slide-header">Виталий Петров</h3>
                   <div class="juri__swiper-slide-overlay">
-                    <p class="juri__swiper-slide-genre">CrossFit</p>
+                    <p class="juri__swiper-slide-genre">Personal Trainer</p>
                     <ul class="juri__swiper-slide-description">
                       <li class="juri__swiper-slide-text">Certified Level 3 Trainer</li>
                       <li class="juri__swiper-slide-text">Победитель чемпионата России по CrossFit </li>
@@ -371,7 +371,14 @@
                 <p>Занимайтесь без очередей<br> и толкучки</p>
               </div>
             </li>
-            <li class="features__item feature">
+            <li class="features__item feature feature--central">
+              <p>
+                <strong>100</strong>
+                <span>Тренажёров</span>
+              </p>
+              <p>Современные тренажёры на все группы мышц</p>
+            </li>
+            <li class="features__item feature feature--aside">
               <p>
                 <strong>70</strong>
                 <span>машин</span>
@@ -381,17 +388,7 @@
                 <p>Вы всегда найдёте место для своей машины на нашей парковке</p>
               </div>
             </li>
-          </ul>
-          <ul class="features__list">
-            <li class="features__item feature feature--central">
-              <p>
-                <strong>100</strong>
-                <span>Тренажёров</span>
-              </p>
-              <p>Современные тренажёры на все группы мышц</p>
-            </li>
-          </ul>
-          <ul class="features__list">
+
             <li class="features__item feature">
               <p>
                 <strong>350</strong>
@@ -402,7 +399,7 @@
                 <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
               </div>
             </li>
-            <li class="features__item feature">
+            <li class="features__item feature feature--aside">
               <p>
                 <strong>5+</strong>
                 <span>лет</span>
@@ -466,33 +463,33 @@
         <h2 class="faq__title section-title">Вопросы и ответы</h2>
         <ul class="faq__faq-tabs faq-tabs">
           <li class="faq__faq-tab faq-tab">
-            <button class="faq-tab__button faq-tab__button--active" type="button" id="center">Центр</button>
+            <button class="faq-tab__button faq-tab__button--active" type="button" data-id="center">Центр</button>
           </li>
           <li class="faq__faq-tab faq-tab">
-            <button class="faq-tab__button" type="button" id="subscription">Абонемент</button>
+            <button class="faq-tab__button" type="button" data-id="subscription">Абонемент</button>
           </li>
           <li class="faq__faq-tab faq-tab">
-            <button class="faq-tab__button" type="button" id="services">Услуги</button>
+            <button class="faq-tab__button" type="button" data-id="services">Услуги</button>
           </li>
           <li class="faq__faq-tab faq-tab">
-            <button class="faq-tab__button" type="button" id="rules">Правила</button>
+            <button class="faq-tab__button" type="button" data-id="rules">Правила</button>
           </li>
         </ul>
         <ul class="faq__faq-accordeon faq-accordeon">
           <li class="faq-accordeon__accordeon-item accordeon-item">
-            <div class="accordeon-item__content accordeon-item__content--active accordeon-item__content--is-visible" id="center">
+            <div class="accordeon-item__content accordeon-item__content--active accordeon-item__content--is-visible" data-id="center">
               <h3>Как стать членом фитнес-центра?</h3>
               <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
             </div>
-            <div class="accordeon-item__content" id="subscription">
+            <div class="accordeon-item__content" data-id="subscription">
               <h3> Какие виды абонементов доступны?</h3>
               <p> Доступны разовые, недельные, месячные и годовые абонементы.</p>
             </div>
-            <div class="accordeon-item__content" id="services">
+            <div class="accordeon-item__content" data-id="services">
               <h3>Какие тренировки предлагаются?</h3>
               <p>У нас есть занятия по йоге, пилатесу, силовым тренировкам и кардио.</p>
             </div>
-            <div class="accordeon-item__content" id="rules">
+            <div class="accordeon-item__content" data-id="rules">
               <h3>Каковы правила пользования залом?</h3>
               <p> Необходимо соблюдать чистоту и использовать специальную обувь.</p>
             </div>
@@ -500,19 +497,19 @@
             " type="button"></button>
           </li>
           <li class="faq-accordeon__accordeon-item accordeon-item">
-            <div class="accordeon-item__content accordeon-item__content--is-visible" id="center">
+            <div class="accordeon-item__content accordeon-item__content--is-visible" data-id="center">
               <h3>Где можно посмотреть расписание?</h3>
               <p>Расписание доступно на сайте клуба в разделе "Услуги", а также в мобильном приложении.</p>
             </div>
-            <div class="accordeon-item__content" id="subscription">
+            <div class="accordeon-item__content" data-id="subscription">
               <h3>Как стать членом фитнес-центра?</h3>
               <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
             </div>
-            <div class="accordeon-item__content" id="services">
+            <div class="accordeon-item__content" data-id="services">
               <h3>Есть ли услуги персонального тренера?</h3>
               <p>Да, можно записаться на индивидуальные тренировки с персональным тренером.</p>
             </div>
-            <div class="accordeon-item__content" id="rules">
+            <div class="accordeon-item__content" data-id="rules">
               <h3>Можно ли приводить гостей?</h3>
               <p> Да, посетители могут привести одного гостя с предварительной регистрацией.</p>
             </div>
@@ -523,34 +520,34 @@
               <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
               <p>Всё необходимое предоставляется и входит в цену.</p>
             </div>
-            <div class="accordeon-item__content" id="subscription">
+            <div class="accordeon-item__content" data-id="subscription">
               <h3>Как стать членом фитнес-центра?</h3>
               <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
             </div>
-            <div class="accordeon-item__content" id="services">
+            <div class="accordeon-item__content" data-id="services">
               <h3>Какие спа-услуги доступны?</h3>
               <p>Мы предлагаем массаж, сауну и джакузи.</p>
             </div>
-            <div class="accordeon-item__content" id="rules">
+            <div class="accordeon-item__content" data-id="rules">
               <h3>Каковы правила отмены бронирования?</h3>
               <p>Отмена должна быть произведена не менее чем за 12 часов до занятия.</p>
             </div>
             <button class="accordeon-item__open-button" type="button"></button>
           </li>
           <li class="faq-accordeon__accordeon-item accordeon-item">
-            <div class="accordeon-item__content accordeon-item__content--is-visible" id="center">
+            <div class="accordeon-item__content accordeon-item__content--is-visible" data-id="center">
               <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
               <p>У Нас работате полный штат квалифицированных специалистов, многие из которых мастера спорта.</p>
             </div>
-            <div class="accordeon-item__content" id="subscription">
+            <div class="accordeon-item__content" data-id="subscription">
               <h3>Как продлить абонемент?</h3>
               <p>Продлить абонемент можно онлайн или на ресепшне.</p>
             </div>
-            <div class="accordeon-item__content" id="services">
+            <div class="accordeon-item__content" data-id="services">
               <h3> Доступен ли бассейн?</h3>
               <p>Бассейн доступен всем клиентам с любого типа абонементом.</p>
             </div>
-            <div class="accordeon-item__content" id="rules">
+            <div class="accordeon-item__content" data-id="rules">
               <h3>Есть ли возрастные ограничения?</h3>
               <p>Дети до 16 лет допускаются только в сопровождении взрослых.</p>
             </div>

@@ -6,6 +6,7 @@
   display: inline-block;
   position: relative;
   min-width: 73px;
+  max-height: 100%;
   text-decoration: none;
   padding: 10px;
   transition: opacity 0.3s $smooth, outline 0.3s $smooth, background 0.3s $smooth;
@@ -47,7 +48,7 @@
 
 .offer-link--aside {
   &:focus-visible {
-    outline: solid 1px #1C3374;
+    outline: solid 1px #1c3374;
   }
 }
 
@@ -55,5 +56,4 @@
   opacity: 0.5;
   pointer-events: none;
 }
-
 

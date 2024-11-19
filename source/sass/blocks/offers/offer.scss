@@ -114,10 +114,9 @@
     }
 
     .offer__content-wrapper--aside {
-      min-height: 174px
+      min-height: 174px;
     }
   }
-
 
 
   .offer-link--main {
@@ -188,6 +187,24 @@
     padding: 40px 45px;
     width: 280px;
     height: 460px;
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888888; /* Цвет ползунка скроллбара */
+      border-radius: 10px; /* Радиус ползунка */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555555; /* Цвет ползунка при наведении */
+    }
 
     h3 {
       @include apply-styles($desktop-h4);

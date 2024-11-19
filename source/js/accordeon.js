@@ -27,10 +27,16 @@ const handleAccButtonClick = () => {
 };
 
 const tabButtonClickHandler = (tab) => {
-  const targetId = tab.id;
+  const targetId = tab.dataset.id;
+
+  tabButtons.forEach((button) => {
+    button.classList.remove('faq-tab__button--active');
+  });
+
+  tab.classList.add('faq-tab__button--active');
 
   accContentContainers.forEach((container) => {
-    const isVisible = container.id === targetId;
+    const isVisible = container.dataset.id === targetId;
     container.classList.toggle('accordeon-item__content--is-visible', isVisible);
 
     const paragraph = container.querySelector('p');
