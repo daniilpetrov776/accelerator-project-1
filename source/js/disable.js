@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll('.button');
 const offerLinks = document.querySelectorAll('.offer-link');
+const tabButtons = document.querySelectorAll('.faq-tab__button');
+const accButtons = document.querySelectorAll('.accordeon-item__open-button');
 
 const blockDisabledButtons = () => {
   buttons.forEach((button) => {
@@ -32,7 +34,31 @@ const blockDisabledOfferLinks = () => {
   });
 };
 
+const blockDisabledTabButtons = () => {
+  tabButtons.forEach((button) => {
+    if (button.classList.contains('faq-tab__button--disabled')) {
+      button.setAttribute('tabindex', '-1');
+      button.addEventListener('click', (evt) => {
+        evt.preventDefault();
+      });
+    }
+  });
+};
+
+const blockDisabledAccButtons = () => {
+  accButtons.forEach((button) => {
+    if (button.classList.contains('accordeon-item__open-button--disabled')) {
+      button.setAttribute('tabindex', '-1');
+      button.addEventListener('click', (evt) => {
+        evt.preventDefault();
+      });
+    }
+  });
+};
+
 export const blockDisabledElements = () => {
   blockDisabledButtons();
   blockDisabledOfferLinks();
+  blockDisabledTabButtons();
+  blockDisabledAccButtons();
 };

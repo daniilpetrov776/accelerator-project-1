@@ -11,6 +11,7 @@
   position: relative;
   z-index: 1;
   transition: color 0.3s $smooth, border 0.3s $smooth;
+  cursor: pointer;
 
   &::after {
     position: absolute;
@@ -42,6 +43,14 @@
   &:focus-visible {
     border-color: $primary;
   }
+}
+
+.faq-tab__button--disabled {
+  background: transparent;
+  border: rgba(16, 38, 84, 0.2);
+  color: #C8C9CC;
+  cursor: auto;
+  pointer-events: none;
 }
 
 @media #{$not-mobile} {

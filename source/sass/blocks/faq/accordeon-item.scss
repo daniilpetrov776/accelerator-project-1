@@ -46,6 +46,33 @@
   border-radius: 50%;
   transition: background 0.3s $smooth;
   align-self: flex-start;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1C3374;
+  }
+
+  &:hover::before {
+    background-color: $white-primary;
+  }
+
+  &:hover::after {
+    background-color: $white-primary;
+  }
+
+  &:focus-visible {
+    background-color: #74819C;
+    border: solid 1px #1C3374;
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    background-color: $white-primary;
+  }
+
+  &:focus-visible::after {
+    background-color: $white-primary;
+  }
 
   &::before {
     position: absolute;
@@ -70,6 +97,12 @@
     background-color: #1C3374;
     transition: background 0.3s $smooth, transform 0.3s $smooth;
   }
+}
+
+.accordeon-item__open-button--disabled {
+  opacity: 0.3;
+  cursor: auto;
+  pointer-events: none;
 }
 
 .accordeon-item__open-button--active {
