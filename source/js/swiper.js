@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-const swiper = new Swiper('.swiper', {
+const juriSwiper = new Swiper('.swiper', {
   direction: 'horizontal',
   init: false,
   loop: true,
@@ -29,4 +29,20 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-export { swiper };
+const reviewsSwiper = new Swiper('.swiper2', {
+  direction: 'horizontal',
+  init: false,
+  loop: false,
+  simulateTouch: false,
+  spaceBetween: 40,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  navigation: {
+    nextEl: '.reviews__swiper-button--next',
+    prevEl: '.reviews__swiper-button--prev',
+  },
+});
+
+export { juriSwiper, reviewsSwiper };

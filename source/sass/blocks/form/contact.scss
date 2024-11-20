@@ -1,0 +1,42 @@
+.contact {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact__label {
+  margin: 0;
+  @include apply-styles($mobile-h5);
+}
+
+.contact__content {
+  text-decoration: none;
+  color: $primary;
+  margin: 0;
+  @include apply-styles($mobile-small-text);
+  transition: opacity 0.3s $smooth;
+}
+
+.contact__content--link {
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+@media #{$not-mobile} {
+  .contact {
+    gap: 5px;
+  }
+
+  .contact__label {
+    @include apply-styles($desktop-h5);
+  }
+
+  .contact__content {
+    @include apply-styles($universal-small-text);
+  }
+}

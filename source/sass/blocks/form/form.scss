@@ -1,0 +1,16 @@
+.form {
+  background-color: $primary;
+  overflow: hidden;
+}
+
+.form__contacts-wrapper {
+  background-color: $white-primary;
+  width: 100%;
+}
+
+@media #{$desktop-only} {
+  .form__form-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}

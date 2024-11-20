@@ -63,7 +63,7 @@
   opacity: 30%;
 }
 
-.button.button--button-secondary {
+.button--button-secondary {
   min-height: 60px;
   border-color: $white-primary;
   color: $white-primary;
@@ -89,4 +89,16 @@
 .button.button--button-secondary-disabled {
   opacity: 50%;
   pointer-events: none;
+}
+
+@media #{$not-mobile} {
+  .button--button-secondary {
+    min-height: 56px;
+  }
+}
+
+@media #{$desktop-only} {
+  .button--button-secondary {
+    min-height: 66px;
+  }
 }

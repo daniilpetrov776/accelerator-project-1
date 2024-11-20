@@ -516,7 +516,7 @@
             <button class="accordeon-item__open-button" type="button"></button>
           </li>
           <li class="faq-accordeon__accordeon-item accordeon-item">
-            <div class="accordeon-item__content accordeon-item__content--is-visible" id="center">
+            <div class="accordeon-item__content accordeon-item__content--is-visible" data-id="center">
               <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
               <p>Всё необходимое предоставляется и входит в цену.</p>
             </div>
@@ -556,9 +556,89 @@
         </ul>
       </div>
     </section>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
+    <section class="reviews" data-test="reviews">
+      <div class="container reviews__reviews-wrapper">
+        <h2 class="reviews__title section-title section-title--bigger">Отзывы</h2>
+        <div class="reviews__swiper-container">
+          <div class="reviews__button-wrapper reviews__button-wrapper--prev">
+            <button class="reviews__swiper-button--prev reviews__swiper-button swiper-button-prev swiper-button" tabindex="0"></button>
+          </div>
+          <div class="reviews__button-wrapper reviews__button-wrapper--next">
+            <button class="reviews__swiper-button--next reviews__swiper-button swiper-button-next swiper-button" tabindex="0"></button>
+          </div>
+          <div class="reviews__swiper swiper2">
+            <div class="reviews__swiper-wrapper swiper-wrapper">
+              <div class="swiper-slide reviews__slide">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/review/review@1x.webp, ./img/review/review@2x.webp 2x" type="image/webp" width="80" height="80">
+                    <source media="(min-width: 768px)" srcset="./img/review/review@1x.jpg, ./img/review/review@2x.jpeg 2x" type="image/jpg" width="80" height="80">
+                    <source media="(min-width: 320px)" srcset="./img/review/review@1x.webp, ./img/review/review@2x.webp 2x" type="image/webp" width="68" height="68">
+                    <img src="./img/review/review@1x.jpg" srcset="./img/review/review@2x.jpg 2x" width="68" height="68" alt="Автор отзыва.">
+                  </picture>
+                </div>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+              <div class="swiper-slide reviews__slide">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/review/review@1x.webp, ./img/review/review@2x.webp 2x" type="image/webp" width="80" height="80">
+                    <source media="(min-width: 768px)" srcset="./img/review/review@1x.jpg, ./img/review/review@2x.jpeg 2x" type="image/jpg" width="80" height="80">
+                    <source media="(min-width: 320px)" srcset="./img/review/review@1x.webp, ./img/review/review@2x.webp 2x" type="image/webp" width="68" height="68">
+                    <img src="./img/review/review@1x.jpg" srcset="./img/review/review@2x.jpg 2x" width="68" height="68" alt="Автор отзыва.">
+                  </picture>
+                </div>
+                <h3>Лера Киселева</h3>
+                <p>«Занимаюсь в Supergym уже несколько месяцев. Обожаю атмосферу в клубе — всегда чувствую себя как дома.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page__form form" data-test="form">
+      <div class="container container--full-width form__form-wrapper">
+        <div class="form__apply apply">
+          <h2 class="apply__title section-title section-title--bigger section-title--secondary">Бесплатное занятие</h2>
+          <form class="apply__form-field" action="https://echo.htmlacademy.ru/" method="post" >
+            <div class="apply__inputs-wrapper">
+              <label class="apply__input-label visually-hidden" for="name">Имя</label>
+              <input disabled class="apply__input" type="text" id="name" name="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+" required title="только буквы и пробелы.">
+              <!-- <span class="apply__error-message">Лол</span> -->
+              <label class="apply__input-label visually-hidden" for="phone">Телефон</label>
+              <input class="apply__input" type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\d{3}-\d{3}-\d{2}-\d{2}" required title="123-456-78-90.">
+            </div>
+            <button class="apply__button button button--button-secondary" type="submit">отправить</button>
+          </form>
+        </div>
+        <div class="form__contacts contacts">
+          <h2 class="contacts__title section-title section-title--bigger">Контакты</h2>
+          <div class="contacts__wrapper">
+            <ul class="contacts__column">
+              <li class="contacts__contact contact">
+                <p class="contact__label">Адрес:</p>
+                <p class="contact__content">г. Омск, ул. 60 лет Октября, 7</p>
+              </li>
+              <li class="contacts__contact contact">
+                <p class="contact__label">График работы:</p>
+                <p class="contact__content">Пн-Вс: с 8:00 до 22:00</p>
+              </li>
+            </ul>
+            <ul class="contacts__column">
+              <li class="contacts__contact contact">
+                <p class="contact__label">Телефон:</p>
+                <a class="contact__content contact__content--link" href="tel:+78005555555">8 800 555-55-55</a>
+              </li>
+              <li class="contacts__contact contact">
+                <p class="contact__label">Email:</p>
+                <a class="contact__content contact__content--link" href="mailto:омск@supergym.ru">oмск@supergym.ru</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <div data-test="footer">footer</div>
     <script type="module" defer src="js/main.js"></script>
   </body>

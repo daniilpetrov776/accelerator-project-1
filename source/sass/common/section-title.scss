@@ -3,11 +3,19 @@
 
   font-family: "Alumni-Sans", "Arial", sans-serif;
   color: $primary;
+
+  &--secondary {
+    color: $white-primary
+  }
 }
 
 @media #{$not-mobile} {
   .section-title {
     @include apply-styles($tablet-h3);
+
+    &--bigger {
+      @include apply-styles($desktop-h3);
+    }
   }
 }
 
