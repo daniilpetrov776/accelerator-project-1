@@ -1,0 +1,37 @@
+.footer {
+  background-color: #030A1A;
+  min-height: 245px;
+}
+
+.footer__footer-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 40px 15px;
+  gap: 30px;
+}
+
+.footer__logo-wrapper {
+  width: 100%;
+}
+
+@media #{$not-mobile} {
+  .footer {
+    min-height: 115px;
+  }
+
+  .footer__footer-wrapper {
+    gap: 30px 0;
+    justify-content: space-between;
+  }
+
+  .footer__logo-wrapper {
+    width: min-content;
+  }
+}
+
+@media #{$desktop-only} {
+  .footer__footer-wrapper {
+    padding: 40px 0;
+  }
+}

@@ -225,7 +225,7 @@
                     <img class="juri__swiper-slide-image" src="./img/juri/juri-3@1x.jpg" srcset="./img/juri/juri-3@2x.jpg 2x" width="260" height="300" alt="Член жюри.">
                   </picture>
                 </div>
-                <div class="juri__swiper-slide-content-wrapper">
+                <div class="juri__swiper`-slide-content-wrapper">
                   <h3 class="juri__swiper-slide-header">Виталий Петров</h3>
                   <div class="juri__swiper-slide-overlay">
                     <p class="juri__swiper-slide-genre">Personal Trainer</p>
@@ -601,13 +601,16 @@
       <div class="container container--full-width form__form-wrapper">
         <div class="form__apply apply">
           <h2 class="apply__title section-title section-title--bigger section-title--secondary">Бесплатное занятие</h2>
-          <form class="apply__form-field" action="https://echo.htmlacademy.ru/" method="post" >
+          <form class="apply__form-field" action="https://echo.htmlacademy.ru/" method="post" novalidate>
             <div class="apply__inputs-wrapper">
-              <label class="apply__input-label visually-hidden" for="name">Имя</label>
-              <input disabled class="apply__input" type="text" id="name" name="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+" required title="только буквы и пробелы.">
-              <!-- <span class="apply__error-message">Лол</span> -->
-              <label class="apply__input-label visually-hidden" for="phone">Телефон</label>
-              <input class="apply__input" type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\d{3}-\d{3}-\d{2}-\d{2}" required title="123-456-78-90.">
+              <label class="apply__input-label">
+                <input class="apply__input apply__input--name" type="text" id="name" name="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+" required title="только буквы и пробелы.">
+                <span class="apply__error-message">только буквы и пробелы.</span>
+              </label>
+              <label class="apply__input-label">
+                <input class="apply__input apply__input--phone" type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\d{3}-\d{3}-\d{2}-\d{2}" required title="123-456-78-90.">
+                <span class="apply__error-message">в формате 123-456-78-90.</span>
+              </label>
             </div>
             <button class="apply__button button button--button-secondary" type="submit">отправить</button>
           </form>
@@ -639,7 +642,45 @@
         </div>
       </div>
     </section>
-    <div data-test="footer">footer</div>
+    <section class="page__footer footer" data-test="footer">
+      <div class="container container--full-width footer__footer-wrapper">
+        <div class="footer__logo-wrapper">
+          <picture>
+            <source media="(min-width: 1366px)" srcset="./img/logo-desktop.svg" width="130" height="26" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" width="110" height="22" type="image/svg+xml">
+            <img class="footer__logo" src="./img/logo-mobile.svg" width="100" height="20" alt="Логотип фитнес центра.">
+          </picture>
+        </div>
+        <ul class="footer__footer-nav footer-nav">
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">Услуги</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">Абонементы</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">Акции</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">Тренеры</a>
+          </li>
+          <li class="footer-nav__item">
+            <a class="footer-nav__link" href="#">Расписание</a>
+          </li>
+        </ul>
+        <ul class="footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="https://htmlacademy.ru/intensive/ecmascript"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--ok" href="https://htmlacademy.ru/intensive/javascript"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--reddit" href="https://htmlacademy.ru/intensive/react"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
     <script type="module" defer src="js/main.js"></script>
   </body>
 

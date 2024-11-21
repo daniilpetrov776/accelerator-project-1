@@ -25,6 +25,11 @@
     transform: scaleX(1);
   }
 
+  &--button-is-disabled::before {
+    transform: scaleX(0);
+    background: transparent;
+  }
+
   &::after {
     position: absolute;
     content: "";

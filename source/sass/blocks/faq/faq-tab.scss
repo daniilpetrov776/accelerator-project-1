@@ -42,12 +42,12 @@
 
   &:focus-visible {
     border-color: $primary;
+    outline: none;
   }
 }
 
 .faq-tab__button--disabled {
   background: transparent;
-  border: rgba(16, 38, 84, 0.2);
   color: #C8C9CC;
   cursor: auto;
   pointer-events: none;

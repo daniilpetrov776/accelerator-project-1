@@ -4,6 +4,7 @@ import { displayPrices } from './price';
 import { DEFAULT_SERVICE_TIME } from './const';
 import { juriSwiper, reviewsSwiper } from './swiper';
 import { updateFaqControls } from './accordeon';
+import './form';
 
 blockDisabledElements();
 LazyLoadVideo();

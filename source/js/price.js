@@ -12,7 +12,15 @@ const toggleCardFocus = (card, addFocus) => {
   card?.classList.toggle('price-card--button-is-focused', addFocus);
 };
 
+const toggleCardDisabledState = (card, isDisabled) => {
+  card?.classList.toggle('price-card--button-is-disabled', isDisabled);
+};
+
 purchaseButtons.forEach((button) => {
+  const card = button.closest('.price-card');
+  const isDisabled = button.classList.contains('button--button-primary-disabled');
+  toggleCardDisabledState(card, isDisabled);
+
   button.addEventListener('focusin', (evt) => toggleCardFocus(evt.target.closest('.price-card'), true));
   button.addEventListener('focusout', (evt) => toggleCardFocus(evt.target.closest('.price-card'), false));
 });

@@ -39,10 +39,6 @@
   position: relative;
   transition: border 0.3s $smooth;
 
-  &:invalid + .apply__error-message {
-    opacity: 1;
-  }
-
   &::placeholder {
     color: $white-primary;
     opacity: 0.7;
@@ -55,11 +51,11 @@
     border-color: $white-primary;
   }
 
-  // &:focus {
-  //   outline: solid 1px $white-primary;
-  //   outline-offset: 2px;
-  //   out
-  // }
+  &:focus-visible {
+    outline: solid 1px $white-primary;
+    outline-offset: 2px;
+    border-color: transparent;
+  }
 
   &:disabled {
     border-color: rgba(255, 255, 255, 0.3);
@@ -81,11 +77,29 @@
     background-color: $white-primary;
     z-index: 0;
   }
+
+  &--invalid {
+    border-color: #FF121F;
+  }
+}
+
+.apply__input--invalid + .apply__error-message {
+  opacity: 1;
+}
+
+.apply__input-label {
+  position: relative;
 }
 
 .apply__error-message {
+  position: absolute;
+  width: 100%;
   opacity: 0;
-  color: red;
+  color: #FF121F;
+  left: 0;
+  height: 100%;
+  top: 115%;
+  overflow: auto;
 }
 
 .apply__button {
