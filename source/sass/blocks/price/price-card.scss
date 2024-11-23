@@ -74,6 +74,9 @@
   }
 }
 
+.price-card__buy-button {
+  top: -1px;
+}
 
 .price-card__price-card-content {
   position: relative;
@@ -117,13 +120,14 @@
   color: $secondary;
   z-index: 1;
   position: relative;
+  top: -2px;
 
   &::after {
     position: absolute;
     width: 24px;
     height: 33px;
-    top: 20px;
-    right: -39px;
+    top: 19px;
+    right: -35px;
     content: "";
     background-image: url("../../__spritemap#sprite-rouble-mobile-view");
     background-position: center center;
@@ -136,8 +140,8 @@
     content: attr(data-shadow);
     width: 100%;
     height: 100%;
-    bottom: 61px;
-    left: -22px;
+    bottom: 49px;
+    left: -15px;
     color: #E8E8E8;
     @include apply-styles($mobile-numbers-xl);
     z-index: -1;
@@ -192,6 +196,7 @@
     }
 
     &::before {
+      font-family: "Roboto-condensed", "Arial", sans-serif;
       @include apply-styles($universal-numbers-xl);
     }
 

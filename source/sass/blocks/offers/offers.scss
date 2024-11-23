@@ -12,6 +12,11 @@
 }
 
 @media #{$not-mobile} {
+
+  .offers__wrapper {
+    padding: 60px 0;
+  }
+
   .offers__title {
     margin: 0 0 35px;
   }

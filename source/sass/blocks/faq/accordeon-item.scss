@@ -4,9 +4,10 @@
   gap: 20px;
   position: relative;
   transition: all 0.3s $smooth;
-  padding: 20px 0;
+  padding: 20px 0 21px 0;
   text-align: left;
   align-items: center;
+  top: 2px;
 
   &::before {
     position: absolute;
@@ -14,7 +15,7 @@
     width: 100%;
     height: 1px;
     background-color: #74819C;
-    top: 0;
+    top: -2px;
     left: 0;
   }
 
@@ -30,7 +31,7 @@
     width: 100%;
     height: 1px;
     background-color: #74819C;
-    bottom: 0;
+    bottom: 1px;
     left: 0;
   }
 }
@@ -44,9 +45,10 @@
   border: solid 1px #1c3374;
   background: transparent;
   border-radius: 50%;
-  transition: background 0.3s $smooth;
-  align-self: flex-start;
+  transition: background 0.3s $smooth, transform 0.3s $smooth;
   cursor: pointer;
+  transform: translateY(0);
+  left: 2px;
 
   &:hover {
     background-color: #1C3374;
@@ -79,8 +81,8 @@
     content: "";
     width: 14px;
     height: 1px;
-    left: 8px;
-    top: 50%;
+    left: 7px;
+    top: 48%;
     transform: rotate(90deg);
     background-color: #1C3374;
     transition: background 0.3s $smooth, transform 0.3s $smooth;
@@ -91,8 +93,8 @@
     content: "";
     width: 14px;
     height: 1px;
-    left: 8px;
-    top: 50%;
+    left: 7px;
+    top: 48%;
     transform: rotate(180deg);
     background-color: #1C3374;
     transition: background 0.3s $smooth, transform 0.3s $smooth;
@@ -107,6 +109,7 @@
 
 .accordeon-item__open-button--active {
   background: #1c3374;
+  transform: translateY(calc(-100%));
 
   &::before {
     transform: rotate(-180deg);
@@ -119,6 +122,10 @@
   }
 }
 
+.accordeon-item__open-button--first {
+  transform: translateY(-71px);
+}
+
 .accordeon-item__content {
   display: none;
   transition: all 0.3s $smooth;
@@ -129,6 +136,7 @@
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+  top: -1px;
 }
 
 .accordeon-item__content h3 {
@@ -171,6 +179,28 @@
     }
   }
 
+  .accordeon-item__open-button {
+    width: 40px;
+    height: 40px;
+    left: 0;
+
+    &::before {
+      width: 20px;
+      left: 9px;
+      height: 1px;
+    }
+
+    &::after {
+      width: 20px;
+      left: 9px;
+      height: 1px;
+    }
+  }
+
+  .accordeon-item__open-button--first {
+    transform: translateY(-42px);
+  }
+
   .accordeon-item__content h3 {
     @include apply-styles($tablet-h5);
     padding: 0 60px 0 0;
@@ -183,6 +213,41 @@
 
   .accordeon-item__content--active p{
     margin: 10px 0 0;
+  }
+
+  .accordeon-item::before {
+    top: 0;
+  }
+
+  .accordeon-item:last-child::after {
+    bottom: -3px;
+  }
+
+  .accordeon-item__content--is-visible {
+    top: 2px;
+  }
+
+  .accordeon-item:first-child::before {
+    top: -2px;
+  }
+
+  .accordeon-item:nth-child(2)::before {
+    top: -1px;
+  }
+
+  .accordeon-item:first-child h3 {
+    position: relative;
+    top: -2px;
+  }
+
+  .accordeon-item:last-child h3 {
+    position: relative;
+    top: 1px;
+  }
+
+  .accordeon-item:first-child p {
+    position: relative;
+    top: -2px;
   }
 }
 

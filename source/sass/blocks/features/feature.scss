@@ -17,7 +17,7 @@
 
   p:first-child {
     @include apply-styles($mobile-small-text);
-
+    margin: 0;
     display: flex;
     flex-flow: wrap column;
     align-items: center;
@@ -41,24 +41,31 @@
 
     margin: 0;
   }
+
+  br {
+    display: none;
+  }
 }
 
 .feature--central {
   background-color: $secondary-button;
   min-height: 225px;
-  justify-content: center;
-  padding: 30px 75px 40px;
+  justify-content: flex-start;
+  padding: 30px 75px 10px;
+  margin: 5px 0;
   gap: 20px;
+
+
+  p {
+    color: $white-primary;
+    margin: 0;
+  }
 
   p strong {
     background: $white-primary;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0 0 5px;
-  }
-
-  p {
-    color: $white-primary;
   }
 
   p:first-child {
@@ -85,9 +92,18 @@
       -webkit-text-fill-color: transparent;
     }
 
+    br {
+      display: block;
+    }
+
     div {
       text-align: left;
       max-width: 240px;
+    }
+
+    div p {
+      position: relative;
+      top: -5px
     }
 
     p {
@@ -97,18 +113,22 @@
     }
 
     p:first-of-type {
-      @include apply-styles($universal-small-text);
-
+      @include apply-styles($universal-medium-text);
       display: flex;
       flex-flow: wrap column;
       align-items: flex-start;
       justify-content: flex-start;
-      color: #2e35ac;
+      position: relative;
+    }
+
+    p:first-of-type span {
+      @include apply-styles($universal-small-text);
     }
 
     h3 {
       @include apply-styles($tablet-h6);
-
+      position: relative;
+      top: -5px;
       margin: 0;
       max-width: 203px;
     }
@@ -116,14 +136,23 @@
 
   .feature--central {
     background-color: $secondary-button;
-    min-height: 225px;
+    min-height: 262px;
     justify-content: center;
     place-self: center;
     padding: 35px;
     gap: 20px;
     width: 320px;
-    margin: 0 30px 0 0;
+    margin: 0 30px;
     display: flex;
+
+    p:first-of-type {
+      align-items: center;
+      gap: 25px;
+    }
+
+    p:first-of-type span {
+      @include apply-styles($tablet-h4);
+    }
 
     p strong {
       background: $white-primary;
@@ -134,6 +163,8 @@
 
     p span {
       @include apply-styles($tablet-h4);
+      position: relative;
+      top: -5px;
     }
 
     p {
@@ -170,6 +201,7 @@
 
     h3 {
       @include apply-styles($desktop-h6);
+      max-width: 210px;
     }
   }
 
@@ -202,8 +234,17 @@
       // background-color: transparent;
     }
 
+    p:first-of-type span {
+      @include apply-styles($desktop-h4);
+    }
+
+
+    p:first-of-type {
+      gap: 10px;
+    }
+
     p strong {
-      margin: 0 0 10px;
+      margin: 0;
     }
 
     p span {

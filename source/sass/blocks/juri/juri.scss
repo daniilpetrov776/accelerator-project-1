@@ -151,7 +151,7 @@
 
   color: $white-primary;
   margin: 0;
-  transform: translateY(207px);
+  transform: translateY(209px);
   top: 46px;
   max-height: 150px;
   text-align: center;
@@ -205,7 +205,7 @@
   }
 
   .juri__title {
-    @include apply-styles($tablet-h3);
+    @include apply-styles($desktop-h3);
 
     margin: 0 0 46px;
   }

@@ -34,6 +34,7 @@
 .promo-info__button {
   margin: 48px 0 0;
   grid-column: 1 / span 2;
+  position: relative;
 }
 
 @media #{$not-mobile} {
@@ -53,6 +54,7 @@
   .promo-info__button {
     margin: 50px 0 0;
     grid-column: 2 / span 1;
+    top: 4px;
   }
 
   .promo-info__promo-services {
@@ -62,11 +64,15 @@
     display: flex;
     flex-flow: wrap;
     align-self: center;
+    position: relative;
+    top: 3px;
   }
 
 
   .promo-info__promo-title {
     @include apply-styles($tablet-h1);
+    position: relative;
+    top: 3px;
   }
 }
 

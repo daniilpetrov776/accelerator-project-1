@@ -199,12 +199,31 @@
               <div class="swiper-slide juri__slide" tabindex="0">
                 <div class="juri__swiper-slide-image-wrapper">
                   <picture>
+                    <source srcset="./img/juri/juri-1@1x.webp, ./img/juri/juri-1@2x.webp 2x" type="image/webp" width="260" height="300">
+                    <img class="juri__swiper-slide-image" src="./img/juri/juri-1@1x.jpg" srcset="./img/juri/juri-1@2x.jpg 2x" width="260" height="300" alt="Член жюри.">
+                  </picture>
+                </div>
+                <div class="juri__swiper-slide-content-wrapper">
+                  <h3 class="juri__swiper-slide-header">Анна Павлова</h3>
+                  <div class="juri__swiper-slide-overlay">
+                    <p class="juri__swiper-slide-genre">CrossFit</p>
+                    <ul class="juri__swiper-slide-description">
+                      <li class="juri__swiper-slide-text">Certified Level 3 Trainer</li>
+                      <li class="juri__swiper-slide-text">Победитель чемпионата России по CrossFit </li>
+                      <li class="juri__swiper-slide-text">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide juri__slide" tabindex="0">
+                <div class="juri__swiper-slide-image-wrapper">
+                  <picture>
                     <source srcset="./img/juri/juri-2@1x.webp, ./img/juri/juri-2@2x.webp 2x" type="image/webp" width="260" height="300">
                     <img class="juri__swiper-slide-image" src="./img/juri/juri-2@1x.jpg" srcset="./img/juri/juri-2@2x.jpg 2x" width="260" height="300" alt="Член жюри.">
                   </picture>
                 </div>
                 <div class="juri__swiper-slide-content-wrapper">
-                  <h3 class="juri__swiper-slide-header">Александр Пашков</h3>
+                  <h3 class="juri__swiper-slide-header">Алексей Лавров</h3>
                   <div class="juri__swiper-slide-overlay">
                     <p class="juri__swiper-slide-genre">CrossFit</p>
                     <ul class="juri__swiper-slide-description">
@@ -223,7 +242,7 @@
                   </picture>
                 </div>
                 <div class="juri__swiper-slide-content-wrapper">
-                  <h3 class="juri__swiper-slide-header">Виталий Петров</h3>
+                  <h3 class="juri__swiper-slide-header">Александр Пашков</h3>
                   <div class="juri__swiper-slide-overlay">
                     <p class="juri__swiper-slide-genre">CrossFit</p>
                     <ul class="juri__swiper-slide-description">
@@ -242,26 +261,7 @@
                   </picture>
                 </div>
                 <div class="juri__swiper-slide-content-wrapper">
-                  <h3 class="juri__swiper-slide-header">Мария Киселева</h3>
-                  <div class="juri__swiper-slide-overlay">
-                    <p class="juri__swiper-slide-genre">CrossFit</p>
-                    <ul class="juri__swiper-slide-description">
-                      <li class="juri__swiper-slide-text">Certified Level 3 Trainer</li>
-                      <li class="juri__swiper-slide-text">Победитель чемпионата России по CrossFit </li>
-                      <li class="juri__swiper-slide-text">Опыт — 6 лет</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide juri__slide" tabindex="0">
-                <div class="juri__swiper-slide-image-wrapper">
-                  <picture>
-                    <source srcset="./img/juri/juri-1@1x.webp, ./img/juri/juri-1@2x.webp 2x" type="image/webp" width="260" height="300">
-                    <img class="juri__swiper-slide-image" src="./img/juri/juri-1@1x.jpg" srcset="./img/juri/juri-1@2x.jpg 2x" width="260" height="300" alt="Член жюри.">
-                  </picture>
-                </div>
-                <div class="juri__swiper-slide-content-wrapper">
-                  <h3 class="juri__swiper-slide-header">Надежда Иванова</h3>
+                  <h3 class="juri__swiper-slide-header">Мария Кетова</h3>
                   <div class="juri__swiper-slide-overlay">
                     <p class="juri__swiper-slide-genre">CrossFit</p>
                     <ul class="juri__swiper-slide-description">
@@ -455,7 +455,7 @@
         </ul>
       </div>
     </section>
-    <section class="page__faq faq">
+    <section class="page__faq faq" data-test="faq">
       <div class="container faq__faq-wrapper">
         <h2 class="faq__title section-title">Вопросы и ответы</h2>
         <ul class="faq__faq-tabs faq-tabs">
@@ -490,7 +490,7 @@
               <h3>Каковы правила пользования залом?</h3>
               <p> Необходимо соблюдать чистоту и использовать специальную обувь.</p>
             </div>
-            <button class="accordeon-item__open-button accordeon-item__open-button--active
+            <button class="accordeon-item__open-button accordeon-item__open-button--active accordeon-item__open-button--first
             " type="button" data-id="1"></button>
           </li>
           <li class="faq-accordeon__accordeon-item accordeon-item">
@@ -679,7 +679,7 @@
         </ul>
       </div>
     </section>
-    <script type="module" defer src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>

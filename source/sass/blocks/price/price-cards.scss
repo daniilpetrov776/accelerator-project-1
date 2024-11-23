@@ -4,7 +4,13 @@
   list-style-type: none;
   display: flex;
   flex-flow: wrap column;
-  gap: 35px;
+  gap: 34px;
+}
+
+@media #{$not-mobile} {
+  .price-cards {
+    gap: 40px;
+  }
 }
 
 @media #{$desktop-only} {

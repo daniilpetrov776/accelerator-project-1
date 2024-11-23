@@ -8,3 +8,7 @@ export const Pricing = {
   '12': { 'coach': 60000, 'day': 20400, 'full-day': 32400 }
 };
 
+export const ACC_BUTTON_HEIGHT = 30;
+
+export const ACC_BUTTON_HEIGHT_OFFSET = 10;
+
