@@ -19,6 +19,24 @@
   width: 240px;
   overflow: hidden;
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+  }
 }
 
 .reviews__title {
@@ -29,7 +47,7 @@
 .reviews__slide {
   background-color: #1C3374;
   width: 240px;
-  min-height: 328px;
+  height: 328px;
   color: $white-primary;
   padding: 30px 25px;
   display: flex;
@@ -37,6 +55,8 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   div {
     width: 68px;
@@ -64,6 +84,7 @@
   p {
     @include apply-styles($mobile-medium-text);
     margin: 16px 0 0 0;
+    width: 190px;
   }
 }
 
@@ -135,7 +156,7 @@
 
   .reviews__slide {
     width: 500px;
-    min-height: 242px;
+    height: 242px;
     color: $white-primary;
     padding: 40px 30px;
     display: grid;
@@ -171,6 +192,7 @@
       margin: 0;
       grid-column: 2/3;
       grid-row: span 1;
+      width: 320px;
     }
   }
 }
@@ -201,7 +223,7 @@
 
   .reviews__slide {
     width: 560px;
-    min-height: 258px;
+    height: 258px;
     padding: 60px;
     display: grid;
     gap: 20px 30px;
@@ -213,6 +235,10 @@
       height: 80px;
       grid-column: 1/2;
       grid-row: span 2;
+    }
+
+    p {
+      width: 330px;
     }
   }
 }

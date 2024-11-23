@@ -3,7 +3,7 @@ import { Pricing, DESKTOP_RESOLUTION, DEFAULT_SERVICE_TIME } from './const';
 const priceOptions = document.querySelectorAll('.price-select__option-button');
 const priceContainer = document.querySelector('.price-select__options-wrapper');
 const pricingTexts = document.querySelectorAll('.price-card__price');
-const pricingShadows = document.querySelectorAll('.price-card__price-shadow');
+// const pricingShadows = document.querySelectorAll('.price-card__price-shadow');
 const purchaseButtons = document.querySelectorAll('.price-card__buy-button');
 const priceCards = document.querySelectorAll('.price-card');
 const scrollTriggerButton = document.querySelector('.promo-info__button');
@@ -27,6 +27,7 @@ purchaseButtons.forEach((button) => {
 
 export const displayPrices = (option) => {
   const selectedPrices = Pricing[option];
+  const isBiggerShadow = parseInt(option, 10) > DEFAULT_SERVICE_TIME;
 
   pricingTexts.forEach((textElement) => {
     const serviceType = textElement.dataset.service;
@@ -34,14 +35,9 @@ export const displayPrices = (option) => {
 
     if (price !== undefined) {
       textElement.textContent = `${price}`;
+      textElement.setAttribute('data-shadow', price);
     }
-  });
-
-  const isBiggerShadow = parseInt(option, 10) > DEFAULT_SERVICE_TIME;
-  pricingShadows.forEach((shadow) => {
-    const serviceType = shadow.dataset.service;
-    shadow.textContent = selectedPrices[serviceType] ?? '';
-    shadow.classList.toggle('price-card__price-shadow--bigger', isBiggerShadow);
+    textElement.classList.toggle('price-card__price--bigger', isBiggerShadow);
   });
 };
 

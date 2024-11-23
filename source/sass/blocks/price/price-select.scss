@@ -38,6 +38,8 @@
   background-color: transparent;
   position: relative;
   cursor: pointer;
+  max-width: 77px;
+  width: min-content;
 
   &::after {
     position: absolute;
@@ -107,6 +109,7 @@
 
   .price-select__option-button {
     min-height: 28px;
+    max-width: 86px;
 
     @include apply-styles($tablet-tabs-lined);
   }
@@ -129,6 +132,7 @@
 
   .price-select__option-button {
     min-height: 30px;
+    max-width: 96px;
 
     @include apply-styles($desktop-tabs-lined);
   }
