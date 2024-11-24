@@ -18,11 +18,11 @@
   transition: background 0.3s $smooth;
 
   &:has(.socials__link:focus-visible) {
-    background-color: #103AAE;
+    background-color: #103aae;
   }
 
   &:has(.socials__link:hover) {
-    background-color: #74819C;
+    background-color: #74819c;
   }
 
   &:has(.socials__link:active) {
@@ -38,12 +38,11 @@
 }
 
 .socials__link {
-  background-color: $white-primary;
   display: inline-block;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #030A1A;
+  background-color: #030a1a;
   position: relative;
   z-index: 2;
   transition: background 0.3s $smooth;
@@ -55,22 +54,22 @@
   }
 
   &--disabled {
-    background-color: #030A1A;
+    background-color: #030a1a;
   }
 
   &--vk {
-    mask: url('/__spritemap#sprite-vk-view') center center no-repeat;
+    mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
     mask-size: 14px 14px;
     mask-composite: exclude;
   }
 
   &--ok {
-    mask: url('/__spritemap#sprite-ok-view') center center no-repeat;
+    mask: url("/__spritemap#sprite-ok-view") center center no-repeat;
     mask-size: 9px 15px;
   }
 
   &--reddit {
-    mask: url('/__spritemap#sprite-reddit-view') center center no-repeat;
+    mask: url("/__spritemap#sprite-reddit-view") center center no-repeat;
     mask-size: 14px 14px;
   }
 }

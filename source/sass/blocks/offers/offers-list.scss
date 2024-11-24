@@ -42,15 +42,13 @@
     &--main {
       grid-row: span 2;
     }
+
+    &--aside {
+      width: 100%;
+    }
   }
 
   .offers-list__offer--main + .offers-list__offer--aside {
     margin: 82px 0 0;
-  }
-
-  .offers-list__offer {
-    &--aside {
-      width: 100%;
-    }
   }
 }

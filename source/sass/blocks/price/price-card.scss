@@ -142,8 +142,10 @@
     height: 100%;
     bottom: 49px;
     left: -15px;
-    color: #E8E8E8;
+    color: #e8e8e8;
+
     @include apply-styles($mobile-numbers-xl);
+
     z-index: -1;
   }
 
@@ -197,9 +199,12 @@
 
     &::before {
       font-family: "Roboto-condensed", "Arial", sans-serif;
-      @include apply-styles($universal-numbers-xl);
-    }
 
+      @include apply-styles($universal-numbers-xl);
+
+      bottom: 60px;
+      left: -18px;
+    }
   }
 }
 

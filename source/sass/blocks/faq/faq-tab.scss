@@ -4,6 +4,7 @@
 
 .faq-tab__button {
   @include apply-styles($mobile-tabs-button);
+
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -49,7 +50,7 @@
 
 .faq-tab__button--disabled {
   background: transparent;
-  color: #C8C9CC;
+  color: #c8c9cc;
   cursor: auto;
   pointer-events: none;
 }
@@ -67,5 +68,7 @@
 @media #{$desktop-only} {
   .faq-tab__button {
     @include apply-styles($desktop-tabs-button);
+
+    padding: 14px 10px 10px;
   }
 }

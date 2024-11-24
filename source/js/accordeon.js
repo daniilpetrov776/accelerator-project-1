@@ -28,7 +28,6 @@ const setAccConetnts = (tabId) => {
     const parentContainer = button.closest('li');
     const contentItem = parentContainer.querySelector('.accordeon-item__content--is-visible');
     const content = contentItem.querySelector('p');
-    // button.style.transform = 'translateY(0)';
 
     button.classList.remove('accordeon-item__open-button--active');
     content.style.maxHeight = '0';

@@ -64,7 +64,7 @@
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #74819C;
+      background-color: #74819c;
       bottom: 0;
       right: -30px;
     }
@@ -77,6 +77,7 @@
     min-height: 338px;
     align-items: flex-start;
     padding: 60px 103px;
+
     &::before {
       width: 100vw;
       left: 0;
@@ -89,7 +90,7 @@
       width: 100vw;
       top: 0;
       left: 0;
-      background-color: #74819C;
+      background-color: #74819c;
     }
   }
 

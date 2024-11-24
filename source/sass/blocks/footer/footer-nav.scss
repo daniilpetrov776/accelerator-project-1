@@ -19,7 +19,9 @@
   color: $white-primary;
   text-decoration: none;
   min-height: 20px;
+
   @include apply-styles($mobile-small-text);
+
   position: relative;
 
 
@@ -74,7 +76,7 @@
 
 @media #{$not-mobile} {
   .footer-nav {
-    gap: 30px
+    gap: 30px;
   }
 
   .footer-nav__link {

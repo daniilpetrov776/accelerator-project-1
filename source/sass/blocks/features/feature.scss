@@ -17,6 +17,7 @@
 
   p:first-child {
     @include apply-styles($mobile-small-text);
+
     margin: 0;
     display: flex;
     flex-flow: wrap column;
@@ -103,7 +104,7 @@
 
     div p {
       position: relative;
-      top: -5px
+      top: -5px;
     }
 
     p {
@@ -114,6 +115,7 @@
 
     p:first-of-type {
       @include apply-styles($universal-medium-text);
+
       display: flex;
       flex-flow: wrap column;
       align-items: flex-start;
@@ -127,6 +129,7 @@
 
     h3 {
       @include apply-styles($tablet-h6);
+
       position: relative;
       top: -5px;
       margin: 0;
@@ -163,6 +166,7 @@
 
     p span {
       @include apply-styles($tablet-h4);
+
       position: relative;
       top: -5px;
     }
@@ -189,6 +193,7 @@
     position: relative;
     grid-column: 1/2;
     grid-row: span 1;
+    align-items: flex-start;
 
     &--aside {
       grid-column: 3/4;
@@ -201,7 +206,9 @@
 
     h3 {
       @include apply-styles($desktop-h6);
+
       max-width: 210px;
+      top: 2px;
     }
   }
 
@@ -249,6 +256,8 @@
 
     p span {
       @include apply-styles($desktop-h4);
+
+      top: 1px;
     }
   }
 }

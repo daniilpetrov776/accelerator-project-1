@@ -71,6 +71,7 @@
 
   .promo-info__promo-title {
     @include apply-styles($tablet-h1);
+
     position: relative;
     top: 3px;
   }

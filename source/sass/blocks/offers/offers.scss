@@ -1,8 +1,6 @@
 .offers__wrapper {
   display: flex;
   flex-flow: wrap column;
-
-  // gap: 40px;
   padding: 40px 0;
 }
 
@@ -12,7 +10,6 @@
 }
 
 @media #{$not-mobile} {
-
   .offers__wrapper {
     padding: 60px 0;
   }
@@ -23,6 +20,10 @@
 }
 
 @media #{$desktop-only} {
+  .offers__wrapper {
+    padding: 100px 0;
+  }
+
   .offers__title {
     margin: 0 0 70px;
   }

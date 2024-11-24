@@ -9,7 +9,7 @@
 }
 
 .apply__title {
-  margin: 0
+  margin: 0;
 }
 
 .apply__form-field {
@@ -30,11 +30,13 @@
   min-height: 27px;
   background-color: transparent;
   border: none;
-  border-bottom: solid 1px #74819C;
+  border-bottom: solid 1px #74819c;
   color: $white-primary;
   padding: 0 0 0 4px;
   font-family: inherit;
+
   @include apply-styles($universal-small-text);
+
   width: 100%;
   position: relative;
   transition: border 0.3s $smooth;
@@ -44,6 +46,7 @@
     opacity: 0.7;
     font-family: inherit;
     font-weight: 300;
+
     @include apply-styles($mobile-medium-text);
   }
 
@@ -68,8 +71,6 @@
   &::before {
     position: absolute;
     content: "";
-    width: calc(100% + 2px);
-    height: calc(100% + 10px);
     width: 20px;
     height: 5px;
     left: -2px;
@@ -79,7 +80,7 @@
   }
 
   &--invalid {
-    border-color: #FF121F;
+    border-color: #ff121f;
   }
 }
 
@@ -95,7 +96,7 @@
   position: absolute;
   width: 100%;
   opacity: 0;
-  color: #FF121F;
+  color: #ff121f;
   left: 0;
   height: 100%;
   top: 115%;
@@ -131,7 +132,7 @@
     }
   }
 
-  .apply__button  {
+  .apply__button {
     min-height: 66px;
   }
 }

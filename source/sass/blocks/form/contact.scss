@@ -7,6 +7,7 @@
 
 .contact__label {
   margin: 0;
+
   @include apply-styles($mobile-h5);
 }
 
@@ -14,7 +15,9 @@
   text-decoration: none;
   color: $primary;
   margin: 0;
+
   @include apply-styles($mobile-small-text);
+
   transition: opacity 0.3s $smooth;
 }
 
@@ -22,6 +25,7 @@
   &:hover {
     opacity: 0.7;
   }
+
   &:active {
     opacity: 0.2;
   }
