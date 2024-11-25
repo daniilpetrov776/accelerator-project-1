@@ -68,7 +68,7 @@
 
     &::after {
       transform: scaleX(1);
-      bottom: 0;
+      bottom: 2px;
       transform-origin: left;
       background-color: $primary;
     }

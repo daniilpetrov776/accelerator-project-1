@@ -15,7 +15,7 @@
     height: 100%;
     display: flex;
     flex-flow: wrap column;
-    gap: 20px;
+    gap: 11px;
     min-height: 144px;
   }
 
@@ -98,7 +98,7 @@
   p {
     @include apply-styles($mobile-large-text);
 
-    margin: 28px 0;
+    margin: 28px 0 20px;
   }
 }
 
@@ -206,6 +206,7 @@
     padding: 40px 45px;
     gap: 0;
     height: 460px;
+    width: 280px;
   }
 
   .offer__content-wrapper--main {

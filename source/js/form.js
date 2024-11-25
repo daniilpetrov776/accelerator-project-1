@@ -1,10 +1,25 @@
 const form = document.querySelector('.apply__form-field');
 const formInputs = form.querySelectorAll('.apply__input');
 
+const messages = {
+  name: 'Только буквы и пробелы.',
+  phone: 'В формате 123-456-78-90.'
+};
+
+const handleEmptyForm = (input) => {
+  const errorElement = input.nextElementSibling;
+  const errorMessage = input.value.length === 0 ? 'Обязательно для заполнения' : messages[input.name];
+
+  if (errorElement) {
+    errorElement.textContent = errorMessage;
+  }
+};
+
 const formSumbitHandler = (evt) => {
   evt.preventDefault();
   formInputs.forEach((input) => {
     input.classList.remove('apply__input--invalid');
+    handleEmptyForm(input);
   });
 
   let isFormValid = true;

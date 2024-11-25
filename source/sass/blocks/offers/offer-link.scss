@@ -3,12 +3,13 @@
 
   color: $secondary-button;
 
-  display: inline-block;
+  display: flex;
+  align-items: center;
   position: relative;
   min-width: 73px;
   max-height: 100%;
   text-decoration: none;
-  padding: 1px 10px 10px;
+  padding: 10px;
   transition: opacity 0.3s $smooth, outline 0.3s $smooth, background 0.3s $smooth;
 
   &::after {
@@ -33,6 +34,10 @@
     opacity: 0.8;
   }
 
+  &::after:hover {
+    background-color: $primary;
+  }
+
   &:active {
     opacity: 1;
   }
@@ -48,7 +53,11 @@
 
 .offer-link--aside {
   &:focus-visible {
-    outline: solid 1px #1c3374;
+    outline: solid 1px #1C3374;
+  }
+
+  &::before {
+    border-color: #1C3374;
   }
 }
 
@@ -63,11 +72,11 @@
     justify-content: flex-start;
     flex-flow: wrap;
     align-items: center;
-    padding: 1px 10px 10px 0;
+    padding: 10px;
 
     &::after {
-      left: 0;
-      width: calc(100% - 10px);
+      left: 10px;
+      width: calc(100% - 20px);
     }
   }
 }

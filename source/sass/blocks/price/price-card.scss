@@ -150,7 +150,7 @@
   }
 
   &--bigger::before {
-    left: -40px;
+    left: -34px;
   }
 }
 
@@ -204,6 +204,10 @@
 
       bottom: 60px;
       left: -18px;
+    }
+
+    &--bigger::before {
+      left: -40px;
     }
   }
 }

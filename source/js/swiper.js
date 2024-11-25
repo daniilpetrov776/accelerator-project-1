@@ -6,8 +6,7 @@ const juriSwiper = new Swiper('.swiper', {
   loop: true,
   simulateTouch: false,
   keyboard: {
-    enabled: true,
-    onlyInViewport: true,
+    enabled: false,
   },
   breakpoints: {
     320: {
