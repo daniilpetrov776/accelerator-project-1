@@ -3,7 +3,6 @@ import { Pricing, DESKTOP_RESOLUTION, DEFAULT_SERVICE_TIME } from './const';
 const priceOptions = document.querySelectorAll('.price-select__option-button');
 const priceContainer = document.querySelector('.price-select__options-wrapper');
 const pricingTexts = document.querySelectorAll('.price-card__price');
-// const pricingShadows = document.querySelectorAll('.price-card__price-shadow');
 const purchaseButtons = document.querySelectorAll('.price-card__buy-button');
 const priceCards = document.querySelectorAll('.price-card');
 const scrollTriggerButton = document.querySelector('.promo-info__button');

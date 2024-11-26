@@ -8,6 +8,7 @@
   text-align: left;
   align-items: center;
   top: 2px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -21,6 +22,18 @@
 
   div {
     width: 238px;
+  }
+
+  &:hover .accordeon-item__open-button {
+    background-color: #1c3374;
+  }
+
+  &:hover .accordeon-item__open-button::before {
+    background-color: $white-primary;
+  }
+
+  &:hover .accordeon-item__open-button::after {
+    background-color: $white-primary;
   }
 }
 

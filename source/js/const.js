@@ -12,3 +12,8 @@ export const ACC_BUTTON_HEIGHT = 30;
 
 export const ACC_BUTTON_HEIGHT_OFFSET = 10;
 
+export const MESSAGES = {
+  name: 'Только буквы и пробелы.',
+  phone: 'В формате 123-456-78-90.',
+  empty: 'Обязательно для заполнения',
+};

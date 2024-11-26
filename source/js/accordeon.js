@@ -21,6 +21,32 @@ const translateCenteredButton = (container, button) => {
   button.style.transform = `translateY(${-translateY}px)`;
 };
 
+const toggleAccordion = (button, parentContainer) => {
+  const tabId = state.activeTab;
+  const buttonId = button.getAttribute('data-id');
+  const contentItem = parentContainer.querySelector('.accordeon-item__content--is-visible');
+  const content = contentItem.querySelector('p');
+
+  const isActive = state.activeAccButtons[tabId].includes(buttonId);
+
+  if (isActive) {
+    state.activeAccButtons[tabId] = state.activeAccButtons[tabId].filter((id) => id !== buttonId);
+
+    button.style.transform = 'translateY(0)';
+
+    button.classList.remove('accordeon-item__open-button--active');
+    contentItem.classList.remove('accordeon-item__content--active');
+    content.style.maxHeight = '0';
+  } else {
+    state.activeAccButtons[tabId].push(buttonId);
+    button.classList.add('accordeon-item__open-button--active');
+    contentItem.classList.add('accordeon-item__content--active');
+    content.style.maxHeight = `${content.scrollHeight}px`;
+    setTimeout(() => {
+      translateCenteredButton(parentContainer, button);
+    }, 300);
+  }
+};
 
 const setAccConetnts = (tabId) => {
   accordionButtons.forEach((button) => {
@@ -64,35 +90,18 @@ const handleTabButtons = () => {
   });
 };
 
-
 const handleAccButtons = () => {
   accordionButtons.forEach((button) => {
+    const parentContainer = button.closest('li');
     button.addEventListener('click', () => {
-      const tabId = state.activeTab;
-      const buttonId = button.getAttribute('data-id');
-      const parentContainer = button.closest('li');
-      const contentItem = parentContainer.querySelector('.accordeon-item__content--is-visible');
-      const content = contentItem.querySelector('p');
+      toggleAccordion(button, parentContainer);
+    });
 
-      const isActive = state.activeAccButtons[tabId].includes(buttonId);
-
-      if (isActive) {
-        state.activeAccButtons[tabId] = state.activeAccButtons[tabId].filter((id) => id !== buttonId);
-
-        button.style.transform = 'translateY(0)';
-
-        button.classList.remove('accordeon-item__open-button--active');
-        contentItem.classList.remove('accordeon-item__content--active');
-        content.style.maxHeight = '0';
-      } else {
-        state.activeAccButtons[tabId].push(buttonId);
-        button.classList.add('accordeon-item__open-button--active');
-        contentItem.classList.add('accordeon-item__content--active');
-        content.style.maxHeight = `${content.scrollHeight}px`;
-        setTimeout(() => {
-          translateCenteredButton(parentContainer, button);
-        }, 300);
+    parentContainer.addEventListener('click', (evt) => {
+      if (evt.target === button) {
+        return;
       }
+      toggleAccordion(button, parentContainer);
     });
   });
 };

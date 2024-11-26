@@ -46,6 +46,7 @@
     opacity: 0.7;
     font-family: inherit;
     font-weight: 300;
+    transition: color 0.3s $smooth;
 
     @include apply-styles($mobile-medium-text);
   }
@@ -58,6 +59,10 @@
     outline: solid 1px $white-primary;
     outline-offset: 2px;
     border-color: transparent;
+  }
+
+  &:focus-visible::placeholder {
+    color: transparent;
   }
 
   &:disabled {
