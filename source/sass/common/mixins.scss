@@ -1,22 +1,3 @@
-// @mixin heading-styles($heading) {
-//   $styles: map-get($headings-desktop, $heading);
-//   font-size: map-get($styles, font-size);
-//   line-height: map-get($styles, line-height);
-//   font-weight: map-get($styles, font-weight);
-
-//   @if map-has-key($styles, letter-spacing) {
-//     letter-spacing: map-get($styles, letter-spacing);
-//   }
-
-//   @if map-has-key($styles, text-transform) {
-//     text-transform: map-get($styles, text-transform);
-//   }
-// }
-
-// h1 {
-//   @include heading-styles(h1);
-// }
-
 @mixin apply-styles($styles) {
   @each $property, $value in $styles {
     #{$property}: $value;
