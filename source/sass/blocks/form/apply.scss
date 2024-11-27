@@ -134,6 +134,7 @@
 
     &::placeholder {
       @include apply-styles($universal-small-text);
+      font-weight: 400;
     }
   }
 

@@ -231,9 +231,9 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #555555;
     }
+  }
 
-    h3 {
-      @include apply-styles($desktop-h4);
-    }
+  .offer--main .offer__content-wrapper h3 {
+    @include apply-styles($desktop-h4);
   }
 }
