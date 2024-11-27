@@ -12,12 +12,12 @@
     <link rel="preload" href="./fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/RobotoCondensed-Medium.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="MyWebSite">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
@@ -611,6 +611,18 @@
                 <h3>Лера Киселева</h3>
                 <p>«Занимаюсь в Supergym уже несколько месяцев. Обожаю атмосферу в клубе — всегда чувствую себя как дома.</p>
               </div>
+              <div class="swiper-slide reviews__slide">
+                <div>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/review/review@1x.webp, ./img/review/review@2x.webp 2x" type="image/webp" width="80" height="80">
+                    <source media="(min-width: 768px)" srcset="./img/review/review@1x.jpg, ./img/review/review@2x.jpeg 2x" type="image/jpg" width="80" height="80">
+                    <source media="(min-width: 320px)" srcset="./img/review/review@1x.webp, ./img/review/review@2x.webp 2x" type="image/webp" width="68" height="68">
+                    <img src="./img/review/review@1x.jpg" srcset="./img/review/review@2x.jpg 2x" width="68" height="68" alt="Автор отзыва.">
+                  </picture>
+                </div>
+                <h3>Мария Петрова</h3>
+                <p>«Красивые тренажёры и зал, мне всё нарвится.»</p>
+              </div>
             </div>
           </div>
         </div>
@@ -620,7 +632,7 @@
       <div class="container container--full-width form__form-wrapper">
         <div class="form__apply apply">
           <h2 class="apply__title section-title section-title--bigger section-title--secondary">Бесплатное занятие</h2>
-          <form class="apply__form-field" action="https://echo.htmlacademy.ru/" method="post" novalidate>
+          <form class="apply__form-field" action="https://echo.htmlacademy.ru" method="post" novalidate>
             <div class="apply__inputs-wrapper">
               <label class="apply__input-label">
                 <input class="apply__input apply__input--name" type="text" id="name" name="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+" required title="только буквы и пробелы.">

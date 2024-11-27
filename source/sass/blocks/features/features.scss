@@ -63,12 +63,6 @@
     padding: 100px 0;
   }
 
-  .features__content-wrapper {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // align-items: start;
-  }
-
   .features__title {
     @include apply-styles($desktop-h3);
   }

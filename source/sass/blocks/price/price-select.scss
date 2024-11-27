@@ -50,39 +50,42 @@
     transform: scaleX(0);
     transition: transform 0.3s $smooth;
   }
+}
 
-  &:hover:not(.price-select__option-button--active) {
-    color: rgba(16, 38, 84, 0.7);
+.price-select__option-button:hover:not(.price-select__option-button--active) {
+  color: rgba(16, 38, 84, 0.7);
 
-    &::after {
-      background-color: #787878;
-      transform: scaleX(1);
-      bottom: 2px;
-      transform-origin: left;
-    }
+  &::after {
+    background-color: #787878;
+    transform: scaleX(1);
+    bottom: 2px;
+    transform-origin: left;
   }
+}
 
-  &:focus-visible {
-    color: $primary;
-    outline: none;
+.price-select__option-button:disabled {
+  color: $primary;
+  opacity: 30%;
+  pointer-events: none;
+  cursor: auto;
 
-    &::after {
-      transform: scaleX(1);
-      bottom: 2px;
-      transform-origin: left;
-      background-color: $primary;
-    }
+  &::after {
+    background-color: $primary;
+    transform: scaleX(1);
+    bottom: 0;
+    bottom: 2px;
   }
+}
 
-  &:disabled {
-    color: $primary;
-    opacity: 30%;
+.price-select__option-button:focus-visible {
+  color: $primary;
+  outline: none;
 
-    &::after {
-      background-color: $primary;
-      transform: scaleX(1);
-      bottom: 0;
-    }
+  &::after {
+    transform: scaleX(1);
+    bottom: 2px;
+    transform-origin: left;
+    background-color: $primary;
   }
 }
 

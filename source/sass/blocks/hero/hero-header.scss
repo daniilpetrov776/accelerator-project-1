@@ -26,10 +26,10 @@
     content: "";
     position: absolute;
     width: 0;
-    height: 2px; /* Толщина линии */
-    bottom: -2px; /* Позиция линии под текстом */
+    height: 2px;
+    bottom: -2px;
     left: 0;
-    background-color: $primary; /* Цвет линии */
+    background-color: $primary;
     transition: width 0.3s ease-in-out;
   }
 

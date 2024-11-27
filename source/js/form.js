@@ -1,11 +1,11 @@
-import { MESSAGES } from './const';
+import { Messages } from './const';
 
 const form = document.querySelector('.apply__form-field');
 const formInputs = form.querySelectorAll('.apply__input');
 
 const handleEmptyForm = (input) => {
   const errorElement = input.nextElementSibling;
-  const errorMessage = input.value.length === 0 ? MESSAGES.empty : MESSAGES[input.name];
+  const errorMessage = input.value.length === 0 ? Messages.empty : Messages[input.name];
 
   if (errorElement) {
     errorElement.textContent = errorMessage;
@@ -46,8 +46,7 @@ const handleInputsChange = () => {
   });
 };
 
-const handleFormValidation = () => {
+export const handleFormValidation = () => {
   form.addEventListener('submit', formSumbitHandler);
   handleInputsChange();
 };
-handleFormValidation();

@@ -44,19 +44,6 @@
     border-color: transparent;
   }
 
-  &:hover .price-card__buy-button::after {
-    transform: scaleX(1);
-  }
-
-  &:hover .price-card__buy-button {
-    color: $white-primary;
-    border-color: transparent;
-  }
-
-  &:hover .price-card__buy-button:active {
-    color: rgba(255, 255, 255, 0.44);
-  }
-
   &:hover::before {
     transform: scaleX(1);
   }
@@ -74,6 +61,19 @@
   }
 }
 
+.price-card:hover .price-card__buy-button::after {
+  transform: scaleX(1);
+}
+.price-card:hover .price-card__buy-button {
+  transform: scaleX(1);
+  color: $white-primary;
+  border-color: transparent;
+}
+.price-card:hover .price-card__buy-button:active {
+  color: rgba(255, 255, 255, 0.44);
+}
+
+
 .price-card__buy-button {
   top: -1px;
 }
@@ -88,6 +88,7 @@
   display: flex;
   flex-flow: wrap column;
   gap: 18px;
+  justify-content: space-between
 }
 
 .price-card__title {

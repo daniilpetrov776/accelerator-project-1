@@ -4,11 +4,14 @@ import { displayPrices } from './price';
 import { DEFAULT_SERVICE_TIME } from './const';
 import { juriSwiper, reviewsSwiper } from './swiper';
 import { handleFaqControls } from './accordeon';
-import './form';
+import { handleFormValidation } from './form';
 
-blockDisabledElements();
-LazyLoadVideo();
-displayPrices(DEFAULT_SERVICE_TIME);
-juriSwiper.init();
-reviewsSwiper.init();
-handleFaqControls();
+document.addEventListener('DOMContentLoaded', () => {
+  blockDisabledElements();
+  LazyLoadVideo();
+  displayPrices(DEFAULT_SERVICE_TIME);
+  juriSwiper.init();
+  reviewsSwiper.init();
+  handleFaqControls();
+  handleFormValidation();
+});
