@@ -1,3 +1,7 @@
+.juri {
+  min-height: 432px;
+}
+
 .juri__slide {
   position: relative;
   width: 260px;
@@ -221,6 +225,10 @@
 }
 
 @media #{$not-mobile} {
+  .juri {
+    min-height: 490px;
+  }
+
   .juri__juri-wrapper {
     padding: 30px 0 60px;
   }
@@ -280,6 +288,10 @@
 }
 
 @media #{$desktop-only} {
+  .juri {
+    min-height: 600px;
+  }
+
   .juri__title {
     @include apply-styles($desktop-h3);
   }

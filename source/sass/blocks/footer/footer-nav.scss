@@ -72,6 +72,12 @@
     pointer-events: none;
     cursor: auto;
   }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: auto;
+  }
 }
 
 @media #{$not-mobile} {

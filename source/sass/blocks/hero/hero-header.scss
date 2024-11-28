@@ -52,6 +52,16 @@
 
   &:disabled {
     color: $white-secondary;
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: auto;
+  }
+
+  &--disabled {
+    color: $white-secondary;
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: auto;
   }
 }
 

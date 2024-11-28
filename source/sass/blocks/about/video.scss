@@ -104,6 +104,21 @@
   &:active::after {
     background: $primary;
   }
+
+  &:disabled::before {
+    background: $white-primary;
+  }
+
+  &:disabled::after {
+    background: $primary;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    border-color: $primary;
+    cursor: auto;
+    pointer-events: none;
+  }
 }
 
 .video__video-iframe {

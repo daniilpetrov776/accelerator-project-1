@@ -1,5 +1,6 @@
 .price {
   background-color: $white-secondary;
+  min-height: 1420px;
 }
 
 .price__price-wrapper {
@@ -13,6 +14,7 @@
     background-position: bottom right;
     object-fit: contain;
     background-size: 325px 388px;
+    min-height: 1730px;
 
     @supports (background-image: url("../../../img/price/plates-tablet@1x.webp")) {
       background-image: url("../../../img/price/plates-tablet@1x.webp");
@@ -39,6 +41,7 @@
   .price {
     background-image: url("../../../img/price/plates-desktop@1x.png");
     background-size: 303px 446px;
+    min-height: 791px;
 
     @supports (background-image: url("../../../img/price/plates-desktop@1x.webp")) {
       background-image: url("../../../img/price/plates-desktop@1x.webp");

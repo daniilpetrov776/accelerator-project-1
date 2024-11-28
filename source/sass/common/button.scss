@@ -51,12 +51,19 @@
 
   &:focus-visible {
     color: $white-primary;
-    border-color: transparent;
+    border-color: #000000;
     outline: none;
   }
 }
 
 .button.button--button-primary-disabled {
+  pointer-events: none;
+  background: $white-primary;
+  color: $primary;
+  opacity: 30%;
+}
+
+.button.button--button-primary:disabled {
   pointer-events: none;
   background: $white-primary;
   color: $primary;
@@ -87,6 +94,11 @@
 }
 
 .button.button--button-secondary-disabled {
+  opacity: 50%;
+  pointer-events: none;
+}
+
+.button.button--button-secondary:disabled {
   opacity: 50%;
   pointer-events: none;
 }

@@ -37,6 +37,62 @@
   }
 }
 
+.accordeon-item:has(.accordeon-item__open-button--disabled):hover {
+  cursor: auto;
+}
+
+.accordeon-item:has(.accordeon-item__open-button:disabled):hover {
+  cursor: auto;
+}
+
+.accordeon-item:hover .accordeon-item__open-button--disabled {
+  background: transparent;
+
+  &::after {
+    background-color: #1c3374;
+  }
+
+  &::before {
+    background-color: #1c3374;
+  }
+}
+
+.accordeon-item:hover .accordeon-item__open-button--disabled.accordeon-item__open-button--active {
+  background: #1c3374;
+
+  &::after {
+    background-color: $white-primary;
+  }
+
+  &::before {
+    background-color: $white-primary;
+  }
+}
+
+.accordeon-item:hover .accordeon-item__open-button:disabled.accordeon-item__open-button--active {
+  background: #1c3374;
+
+  &::after {
+    background-color: $white-primary;
+  }
+
+  &::before {
+    background-color: $white-primary;
+  }
+}
+
+.accordeon-item:hover .accordeon-item__open-button:disabled {
+  background: transparent;
+
+  &::after {
+    background-color: #1c3374;
+  }
+
+  &::before {
+    background-color: #1c3374;
+  }
+}
+
 .accordeon-item:last-child {
   &::after {
     position: absolute;
@@ -118,6 +174,11 @@
   opacity: 0.3;
   cursor: auto;
   pointer-events: none;
+}
+
+.accordeon-item__open-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
 }
 
 .accordeon-item__open-button--active {

@@ -1,3 +1,7 @@
+.offers {
+  min-height: 1191px;
+}
+
 .offers__wrapper {
   display: flex;
   flex-flow: wrap column;
@@ -10,6 +14,10 @@
 }
 
 @media #{$not-mobile} {
+  .offers {
+    min-height: 882px;
+  }
+
   .offers__wrapper {
     padding: 60px 0;
   }
@@ -20,6 +28,10 @@
 }
 
 @media #{$desktop-only} {
+  .offers {
+    min-height: 784px;
+  }
+
   .offers__wrapper {
     padding: 100px 0;
   }

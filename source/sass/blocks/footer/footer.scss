@@ -34,6 +34,10 @@
 }
 
 @media #{$desktop-only} {
+  .footer {
+    min-height: 106px;
+  }
+
   .footer__footer-wrapper {
     padding: 40px 0;
   }

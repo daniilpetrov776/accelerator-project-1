@@ -21,13 +21,23 @@
 .socials__item:has(.socials__link:focus-visible) {
   background-color: #103aae;
 }
+
 .socials__item:has(.socials__link:hover) {
   background-color: #74819c;
 }
+
 .socials__item:has(.socials__link:active) {
   background-color: $primary;
 }
+
 .socials__item:has(.socials__link--disabled) {
+  pointer-events: none;
+  cursor: auto;
+  background-color: $white-primary;
+  opacity: 0.3;
+}
+
+.socials__item:has(.socials__link:disabled) {
   pointer-events: none;
   cursor: auto;
   background-color: $white-primary;
@@ -51,6 +61,10 @@
   }
 
   &--disabled {
+    background-color: #030a1a;
+  }
+
+  &:disabled {
     background-color: #030a1a;
   }
 

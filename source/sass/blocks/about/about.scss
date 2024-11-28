@@ -1,3 +1,7 @@
+.about {
+  min-height: 812px;
+}
+
 .about__about-wrapper {
   padding: 0 0 40px;
   position: relative;
@@ -8,6 +12,11 @@
 }
 
 @media #{$not-mobile} {
+  .about {
+    min-height: 751px;
+  }
+
+
   .about__about-wrapper {
     padding: 0 0 120px;
   }
@@ -20,6 +29,10 @@
 }
 
 @media #{$desktop-only} {
+  .about {
+    min-height: 760px;
+  }
+
   .about__about-wrapper {
     display: flex;
     flex-flow: wrap;

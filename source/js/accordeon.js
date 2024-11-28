@@ -28,6 +28,11 @@ const toggleAccordion = (button, parentContainer) => {
   const content = contentItem.querySelector('p');
 
   const isActive = state.activeAccButtons[tabId].includes(buttonId);
+  const isDisabled = button.classList.contains('accordeon-item__open-button--disabled') || button.hasAttribute('disabled');
+
+  if (isDisabled) {
+    return;
+  }
 
   if (isActive) {
     state.activeAccButtons[tabId] = state.activeAccButtons[tabId].filter((id) => id !== buttonId);

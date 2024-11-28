@@ -1,3 +1,7 @@
+.reviews {
+  min-height: 480px;
+}
+
 .reviews__reviews-wrapper {
   padding: 40px 0;
   display: grid;
@@ -91,6 +95,10 @@
 }
 
 @media #{$not-mobile} {
+  .reviews {
+    min-height: 451px;
+  }
+
   .reviews__reviews-wrapper {
     padding: 60px 0;
     display: grid;
@@ -204,6 +212,10 @@
 }
 
 @media #{$desktop-only} {
+  .reviews {
+    min-height: 587px;
+  }
+
   .reviews__reviews-wrapper {
     padding: 100px 0;
     display: grid;

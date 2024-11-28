@@ -1,5 +1,6 @@
 .features {
   background-color: $white-secondary;
+  min-height: 1193px;
 }
 
 .features__features-wrapper {
@@ -40,6 +41,10 @@
 }
 
 @media #{$not-mobile} {
+  .features {
+    min-height: 738px;
+  }
+
   .features__features-wrapper {
     padding: 60px 0;
   }
@@ -59,6 +64,10 @@
 }
 
 @media #{$desktop-only} {
+  .features {
+    min-height: 604px;
+  }
+
   .features__features-wrapper {
     padding: 100px 0;
   }

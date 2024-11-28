@@ -66,6 +66,19 @@
   pointer-events: none;
 }
 
+.offer-link:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.offer-link--aside.offer-link--disabled {
+  opacity: 0.3;
+}
+
+.offer-link--aside.offer-link:disabled {
+  opacity: 0.3;
+}
+
 @media #{$desktop-only} {
   .offer-link {
     display: flex;

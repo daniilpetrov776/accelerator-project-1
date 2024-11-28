@@ -1,5 +1,6 @@
 .faq {
   background-color: $white-secondary;
+  min-height: 849px;
 }
 
 .faq__title {
@@ -18,6 +19,10 @@
 }
 
 @media #{$not-mobile} {
+  .faq {
+    min-height: 741px;
+  }
+
   .faq__faq-wrapper {
     padding: 60px 0;
     gap: 45px;
@@ -25,6 +30,10 @@
 }
 
 @media #{$desktop-only} {
+  .faq {
+    min-height: 743px;
+  }
+
   .faq__faq-wrapper {
     display: grid;
     justify-content: start;
