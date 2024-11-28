@@ -5,6 +5,10 @@
 
   @media #{$mobile-only} {
     width: 290px;
+
+    &--full-width {
+      width: 320px;
+    }
   }
 
   @media #{$tablet-only} {
@@ -12,6 +16,6 @@
   }
 
   @media #{$desktop-only} {
-    width: 1130px;
+    width: 1160px;
   }
 }

@@ -8,10 +8,7 @@ $tablet-only: "(#{$tablet-min-width} <= width <= #{$tablet-max-width})";
 $desktop-only: "(width >= #{$desktop-min-width})";
 $not-mobile: "(width >= #{$tablet-min-width})";
 $not-desktop: "(width <= #{$desktop-min-width})";
-
 $smooth: cubic-bezier(0.4, 0, 0.4, 1);
-
-// colors
 $primary: #102654;
 $secondary: #103aae;
 $secondary-button: #1c3374;
@@ -21,11 +18,6 @@ $white-primary: #ffffff;
 $black: #030a1a;
 $banner: #ed0233;
 $error: #ff121f;
-
-// text-params
-
-// h
-
 $desktop-h1: (
   font-size: 92px,
   line-height: 110px,
@@ -40,7 +32,6 @@ $tablet-h1: (
   letter-spacing: 0.02em,
   text-transform: uppercase
 );
-
 $mobile-h1: (
   font-size: 62px,
   line-height: 62px,
@@ -96,7 +87,6 @@ $mobile-h4: (
   line-height: 22px,
   font-weight: 700
 );
-
 $desktop-h5: (
   font-size: 24px,
   line-height: 24px,
@@ -112,7 +102,6 @@ $mobile-h5: (
   line-height: 20px,
   font-weight: 400
 );
-
 $desktop-h6: (
   font-size: 22px,
   line-height: 22px,
@@ -128,9 +117,6 @@ $mobile-h6: (
   line-height: 20px,
   font-weight: 400
 );
-
-// text
-
 $universal-large-text: (
   font-size: 18px,
   line-height: 24px,
@@ -161,9 +147,6 @@ $mobile-small-text: (
   line-height: 20px,
   font-weight: 400
 );
-
-// buttons
-
 $desktop-tabs-lined: (
   font-size: 20px,
   line-height: 20px,
@@ -231,9 +214,6 @@ $mobile-button-medium: (
   font-weight: 700,
   text-transform: uppercase
 );
-
-// numbers
-
 $universal-numbers-xl: (
   font-size: 100px,
   line-height: 1.5,

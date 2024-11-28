@@ -1,0 +1,27 @@
+.form {
+  background-color: $primary;
+  overflow: hidden;
+  min-height: 832px;
+}
+
+.form__contacts-wrapper {
+  background-color: $white-primary;
+  width: 100%;
+}
+
+@media #{$not-mobile} {
+  .form {
+    min-height: 665px;
+  }
+}
+
+@media #{$desktop-only} {
+  .form {
+    min-height: 338px;
+  }
+
+  .form__form-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}

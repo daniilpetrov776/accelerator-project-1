@@ -1,0 +1,21 @@
+.faq-tabs {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media #{$not-mobile} {
+  .faq-tabs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media #{$desktop-only} {
+  .faq-tabs {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}

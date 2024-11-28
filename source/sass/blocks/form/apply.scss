@@ -1,0 +1,158 @@
+.apply {
+  background-color: $primary;
+  min-height: 394px;
+  padding: 70px 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  gap: 36px;
+}
+
+.apply__title {
+  margin: 0;
+}
+
+.apply__form-field {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  gap: 36px;
+}
+
+.apply__inputs-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 36px;
+  justify-content: flex-start;
+}
+
+.apply__input {
+  min-height: 27px;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #74819c;
+  color: $white-primary;
+  padding: 0 0 0 4px;
+  font-family: inherit;
+
+  @include apply-styles($universal-small-text);
+
+  width: 100%;
+  position: relative;
+  transition: border 0.3s $smooth;
+
+  &::placeholder {
+    color: $white-primary;
+    opacity: 0.7;
+    font-family: inherit;
+    font-weight: 300;
+    transition: color 0.3s $smooth;
+
+    @include apply-styles($mobile-medium-text);
+  }
+
+  &:hover {
+    border-color: $white-primary;
+  }
+
+  &:focus-visible {
+    outline: solid 1px $white-primary;
+    outline-offset: 2px;
+    border-color: transparent;
+  }
+
+  &:focus-visible::placeholder {
+    color: transparent;
+  }
+
+  &:disabled {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 5px;
+    left: -2px;
+    top: -5px;
+    background-color: $white-primary;
+    z-index: 0;
+  }
+
+  &--invalid {
+    border-color: #ff121f;
+  }
+}
+
+.apply__input--invalid + .apply__error-message {
+  opacity: 1;
+}
+
+.apply__input-label {
+  position: relative;
+}
+
+.apply__error-message {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  color: #ff121f;
+  left: 0;
+  height: 100%;
+  top: 115%;
+  overflow: auto;
+}
+
+.apply__button {
+  background-color: transparent;
+}
+
+@media #{$not-mobile} {
+  .apply {
+    min-height: 338px;
+    padding: 60px 119px;
+    align-items: center;
+  }
+
+  .apply__title {
+    min-height: 54px;
+  }
+
+  .apply__inputs-wrapper {
+    flex-flow: row wrap;
+    gap: 30px;
+  }
+
+  .apply__input {
+    min-height: 26px;
+    width: 205px;
+
+    &::placeholder {
+      @include apply-styles($universal-small-text);
+
+      font-weight: 400;
+    }
+  }
+
+  .apply__button {
+    min-height: 66px;
+  }
+}
+
+@media #{$desktop-only} {
+  .apply {
+    width: 580px;
+    min-height: 338px;
+    padding: 60px 103px 60px 0;
+    align-items: flex-start;
+  }
+
+  .apply__input {
+    width: 223.5px;
+  }
+}

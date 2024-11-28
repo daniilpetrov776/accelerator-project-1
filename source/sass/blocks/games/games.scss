@@ -1,0 +1,27 @@
+.games {
+  min-height: 660px;
+}
+
+.games__games-wrapper {
+  padding: 25px 0;
+}
+
+@media #{$not-mobile} {
+  .games {
+    min-height: 468px;
+  }
+
+  .games__games-wrapper {
+    padding: 60px 0;
+  }
+}
+
+@media #{$desktop-only} {
+  .games {
+    min-height: 700px;
+  }
+
+  .games__games-wrapper {
+    padding: 100px 0;
+  }
+}

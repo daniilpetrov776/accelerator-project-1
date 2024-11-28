@@ -1,0 +1,257 @@
+.feature {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  min-height: 150px;
+  padding: 0 45px;
+  text-align: center;
+  gap: 12px;
+
+  p strong {
+    @include apply-styles($mobile-numbers-large);
+
+    background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p:first-child {
+    @include apply-styles($mobile-small-text);
+
+    margin: 0;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    color: #2e35ac;
+  }
+
+  div {
+    display: flex;
+    flex-flow: wrap column;
+    gap: 12px;
+  }
+
+  div p {
+    @include apply-styles($mobile-medium-text);
+
+    margin: 0;
+  }
+
+  h3 {
+    @include apply-styles($mobile-h6);
+
+    margin: 0;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.feature--central {
+  background-color: $secondary-button;
+  min-height: 225px;
+  justify-content: flex-start;
+  padding: 30px 75px 10px;
+  margin: 5px 0;
+  gap: 20px;
+
+
+  p {
+    color: $white-primary;
+    margin: 0;
+  }
+
+  p strong {
+    background: $white-primary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 5px;
+  }
+
+  p:first-child {
+    @include apply-styles($mobile-h4);
+
+    color: $white-primary;
+  }
+}
+
+@media #{$not-mobile} {
+  .feature {
+    width: 324px;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    min-height: 92px;
+    padding: 0;
+    gap: 15px;
+
+    p strong {
+      @include apply-styles($universal-numbers-large);
+
+      background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    br {
+      display: block;
+    }
+
+    div {
+      text-align: left;
+      max-width: 240px;
+    }
+
+    div p {
+      position: relative;
+      top: -5px;
+    }
+
+    p {
+      @include apply-styles($universal-medium-text);
+
+      margin: 0;
+    }
+
+    p:first-of-type {
+      @include apply-styles($universal-medium-text);
+
+      display: flex;
+      flex-flow: wrap column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    p:first-of-type span {
+      @include apply-styles($universal-small-text);
+    }
+
+    h3 {
+      @include apply-styles($tablet-h6);
+
+      position: relative;
+      top: -5px;
+      margin: 0;
+      max-width: 203px;
+    }
+  }
+
+  .feature--central {
+    background-color: $secondary-button;
+    min-height: 262px;
+    justify-content: center;
+    place-self: center;
+    padding: 35px;
+    gap: 20px;
+    width: 320px;
+    margin: 0 30px;
+    display: flex;
+
+    p:first-of-type {
+      align-items: center;
+      gap: 25px;
+    }
+
+    p:first-of-type span {
+      @include apply-styles($tablet-h4);
+    }
+
+    p strong {
+      background: $white-primary;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 0 5px;
+    }
+
+    p span {
+      @include apply-styles($tablet-h4);
+
+      position: relative;
+      top: -5px;
+    }
+
+    p {
+      color: $white-primary;
+    }
+
+    p:first-child {
+      @include apply-styles($universal-medium-text);
+
+      color: $white-primary;
+    }
+  }
+}
+
+@media #{$desktop-only} {
+  .feature {
+    width: 360px;
+    display: flex;
+    flex-flow: wrap row;
+    min-height: 110px;
+    justify-content: space-between;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: span 1;
+    align-items: flex-start;
+
+    &--aside {
+      grid-column: 3/4;
+    }
+
+    div {
+      text-align: left;
+      width: 210px;
+    }
+
+    h3 {
+      @include apply-styles($desktop-h6);
+
+      max-width: 210px;
+      top: 2px;
+    }
+  }
+
+  .feature:not(:first-of-type):not(:nth-of-type(2)):not(:nth-of-type(3))::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(209, 10, 66, 0.2);
+    top: -40px;
+    left: 0;
+  }
+
+  .feature--central {
+    min-height: 300px;
+    justify-content: center;
+    place-self: start;
+    order: 0;
+    background-color: #1c3374;
+    padding: 58px 40px;
+    gap: 30px;
+    width: 360px;
+    margin: 0;
+    display: flex;
+    grid-column: 2/3;
+    grid-row: span 2;
+
+    p:first-of-type span {
+      @include apply-styles($desktop-h4);
+    }
+
+    p:first-of-type {
+      gap: 10px;
+    }
+
+    p strong {
+      margin: 0;
+    }
+
+    p span {
+      @include apply-styles($desktop-h4);
+
+      top: 1px;
+    }
+  }
+}

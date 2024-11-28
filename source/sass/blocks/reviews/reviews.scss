@@ -1,0 +1,263 @@
+.reviews {
+  min-height: 480px;
+}
+
+.reviews__reviews-wrapper {
+  padding: 40px 0;
+  display: grid;
+  gap: 40px;
+}
+
+.reviews__swiper-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.reviews__button-wrapper {
+  position: absolute;
+  display: none;
+}
+
+.reviews__swiper {
+  width: 240px;
+  overflow: hidden;
+  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+  }
+}
+
+.reviews__title {
+  text-align: center;
+  margin: 0;
+}
+
+.reviews__slide {
+  background-color: #1c3374;
+  width: 240px;
+  height: 328px;
+  color: $white-primary;
+  padding: 30px 25px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  div {
+    width: 68px;
+    height: 68px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  img {
+    top: 0;
+    object-position: -2px -4px;
+    width: 109px;
+    height: 93px;
+  }
+
+  h3 {
+    margin: 10px 0 0;
+
+    @include apply-styles($mobile-h6);
+  }
+
+  p {
+    @include apply-styles($mobile-medium-text);
+
+    margin: 16px 0 0;
+    width: 190px;
+  }
+}
+
+@media #{$not-mobile} {
+  .reviews {
+    min-height: 451px;
+  }
+
+  .reviews__reviews-wrapper {
+    padding: 60px 0;
+    display: grid;
+    gap: 35px;
+  }
+
+  .reviews__button-wrapper {
+    display: block;
+    top: 105px;
+    width: 20px;
+    height: 32px;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 30px;
+    }
+  }
+
+  .reviews__swiper-button {
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+  }
+
+  .reviews__swiper-button--prev {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 32px;
+      mask: url("/__spritemap#arrow-prev-view") center center no-repeat;
+      mask-size: 16px 97px;
+      background: $primary;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .reviews__swiper-button--next {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 32px;
+      mask: url("/__spritemap#arrow-next-view") center center no-repeat;
+      mask-size: 20px 32px;
+      background: $primary;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  .reviews__swiper {
+    width: 500px;
+    min-height: 242px;
+  }
+
+  .reviews__swiper-wrapper {
+    align-items: flex-start;
+  }
+
+  .reviews__slide {
+    width: 500px;
+    height: 242px;
+    color: $white-primary;
+    padding: 40px 30px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-auto-rows: min-content;
+    gap: 20px 40px;
+    text-align: left;
+    align-items: start;
+
+    div {
+      width: 80px;
+      height: 80px;
+      grid-column: 1/2;
+      grid-row: span 2;
+    }
+
+    img {
+      top: 0;
+      object-position: center -4px;
+      width: 120px;
+      height: 102px;
+    }
+
+    h3 {
+      margin: 0;
+
+      @include apply-styles($desktop-h6);
+
+      grid-column: 2/3;
+      grid-row: span 1;
+    }
+
+    p {
+      @include apply-styles($universal-medium-text);
+
+      margin: 0;
+      grid-column: 2/3;
+      grid-row: span 1;
+      width: 320px;
+    }
+  }
+}
+
+@media #{$desktop-only} {
+  .reviews {
+    min-height: 587px;
+  }
+
+  .reviews__reviews-wrapper {
+    padding: 100px 0;
+    display: grid;
+    gap: 75px;
+  }
+
+  .reviews__button-wrapper {
+    display: block;
+    top: 113px;
+
+    &--prev {
+      left: 196px;
+    }
+
+    &--next {
+      right: 226px;
+    }
+  }
+
+  .reviews__swiper {
+    width: 560px;
+    min-height: 258px;
+  }
+
+  .reviews__slide {
+    width: 560px;
+    height: 258px;
+    padding: 60px;
+    display: grid;
+    gap: 20px 30px;
+    text-align: left;
+    align-items: start;
+
+    div {
+      width: 80px;
+      height: 80px;
+      grid-column: 1/2;
+      grid-row: span 2;
+    }
+
+    p {
+      width: 330px;
+    }
+  }
+}

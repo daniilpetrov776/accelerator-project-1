@@ -1,0 +1,145 @@
+.price-select__options-wrapper {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: space-between;
+  min-height: 26px;
+  position: relative;
+  margin: 0 0 30px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+    bottom: 2px;
+  }
+}
+
+.price-select__title {
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.price-select__option-button {
+  @include apply-styles($mobile-tabs-lined);
+
+  color: rgba(16, 38, 84, 0.5);
+  border: none;
+  min-height: 26px;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  max-width: 77px;
+  width: min-content;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
+  }
+}
+
+.price-select__option-button:hover:not(.price-select__option-button--active) {
+  color: rgba(16, 38, 84, 0.7);
+
+  &::after {
+    background-color: #787878;
+    transform: scaleX(1);
+    bottom: 2px;
+    transform-origin: left;
+  }
+}
+
+.price-select__option-button:disabled {
+  color: $primary;
+  opacity: 30%;
+  pointer-events: none;
+  cursor: auto;
+
+  &::after {
+    background-color: $primary;
+    transform: scaleX(1);
+    bottom: 2px;
+  }
+}
+
+.price-select__option-button:focus-visible {
+  color: $primary;
+  outline: none;
+
+  &::after {
+    transform: scaleX(1);
+    bottom: 2px;
+    transform-origin: left;
+    background-color: $primary;
+  }
+}
+
+.price-select__option-button--active {
+  color: $primary;
+
+  &::after {
+    transform: scaleX(1);
+    background-color: #d10a42;
+    bottom: 2px;
+  }
+}
+
+@media #{$not-mobile} {
+  .price-select {
+    width: 310px;
+  }
+
+  .price-select__title {
+    margin: 0 0 35px;
+
+    @include apply-styles($tablet-h3);
+  }
+
+  .price-select__option-button {
+    min-height: 28px;
+    max-width: 86px;
+
+    @include apply-styles($tablet-tabs-lined);
+  }
+
+  .price-select__options-wrapper {
+    margin: 0 0 45px;
+  }
+}
+
+@media #{$desktop-only} {
+  .price-select {
+    width: 350px;
+  }
+
+  .price-select__title {
+    margin: 0 0 20px;
+
+    @include apply-styles($desktop-h3);
+  }
+
+  .price-select__option-button {
+    min-height: 30px;
+    max-width: 96px;
+
+    @include apply-styles($desktop-tabs-lined);
+  }
+
+  .price-select__options-wrapper {
+    margin: 0 0 40px;
+  }
+}

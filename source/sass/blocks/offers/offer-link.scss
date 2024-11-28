@@ -1,0 +1,95 @@
+.offer-link {
+  @include apply-styles($desktop-button-large);
+
+  color: $secondary-button;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 73px;
+  max-height: 100%;
+  text-decoration: none;
+  padding: 10px;
+  transition: opacity 0.3s $smooth, outline 0.3s $smooth, background 0.3s $smooth;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: #74819c;
+    left: 10px;
+    bottom: 5px;
+  }
+
+  &--main {
+    color: $white-primary;
+  }
+
+  &--main::after {
+    background-color: $white-primary;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &::after:hover {
+    background-color: $primary;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: solid 1px $white-primary;
+  }
+}
+
+.offer-link:focus-visible::after {
+  background-color: transparent;
+}
+
+.offer-link--aside {
+  &:focus-visible {
+    outline: solid 1px #1c3374;
+  }
+
+  &::before {
+    border-color: #1c3374;
+  }
+}
+
+.offer-link--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.offer-link:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.offer-link--aside.offer-link--disabled {
+  opacity: 0.3;
+}
+
+.offer-link--aside.offer-link:disabled {
+  opacity: 0.3;
+}
+
+@media #{$desktop-only} {
+  .offer-link {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: wrap;
+    align-items: center;
+    padding: 10px;
+
+    &::after {
+      left: 10px;
+      width: calc(100% - 20px);
+    }
+  }
+}
