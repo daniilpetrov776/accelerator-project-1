@@ -83,6 +83,7 @@
 @media #{$not-mobile} {
   .footer-nav {
     gap: 30px;
+    max-width: 400px;
   }
 
   .footer-nav__link {
@@ -93,6 +94,7 @@
 @media #{$desktop-only} {
   .footer-nav {
     gap: 82px;
+    max-width: 600px;
     align-items: center;
   }
 }
